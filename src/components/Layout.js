@@ -1,11 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import './all.sass';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
+const DefaultFont = styled.div`
+  font-family: 'Nunito';
+`;
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
@@ -42,6 +46,10 @@ const TemplateWrapper = ({ children }) => {
           href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Nunito:700,700i&display=swap"
+          rel="stylesheet"
+        />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -53,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <DefaultFont>{children}</DefaultFont>
       <Footer />
     </div>
   );

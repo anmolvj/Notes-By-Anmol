@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 import github from '../img/github-icon.svg';
-import logo from '../img/logo.svg';
+
+const MyName = styled.h1`
+  font-family: 'Dancing Script';
+`;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,7 +46,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <MyName>AV</MyName>
             </Link>
             {/* Hamburger menu */}
             <div

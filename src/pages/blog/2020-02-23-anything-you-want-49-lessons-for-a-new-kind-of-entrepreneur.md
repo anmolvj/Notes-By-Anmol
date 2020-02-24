@@ -6,13 +6,13 @@ description: >-
   A journey of the Entrepreneur behind CD Baby and the things he learned along
   the way that helped him derive fulfillment through his endeavors.
 featuredpost: true
-featuredimage: /img/Anything-you-want-book-cover.png
+featuredimage: /img/anything you want - derek sivers - book cover.jpeg
 tags:
   - Book
   - Entrepreneurship
   - Business
 ---
-![Anything You Want - Book Cover](/img/Anything-you-want-book-cover.png "Anything You Want")
+![Anything You Want - Book Cover](/img/anything you want - derek sivers - book cover.jpeg "Anything You Want")
 
 ### Key takeaways from the book
 

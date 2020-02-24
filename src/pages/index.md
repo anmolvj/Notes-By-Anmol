@@ -3,7 +3,7 @@ templateKey: index-page
 title: Anmol Vijayvargiya
 image: /img/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg
 heading: Great coffee with a conscience
-subheading: 'I build, I organize, I improve the experience of anything I meddle with.'
+subheading: 'I build, I organize, I improve the experience of things I meddle with.'
 mainpitch:
   title: 'Hi Person from the Internet,'
   description: >

@@ -5,14 +5,16 @@ image: /img/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg
 heading: Great coffee with a conscience
 subheading: 'I build, I organize, I improve the experience of things I meddle with.'
 mainpitch:
-  title: 'Hi Person from the Internet,'
+  title: 'Hi internet surfers,'
   description: >
     I am a classic millennial geek living in Silicon Valley who's love and
     appreciation of the great invention of the internet led him to follow the
-    path of a full-stack software developer.  Personally I am deeply passionate
-    about finding room for organization and automation in everything I encounter
-    ranging from my day time job to my personal growth by working on building
-    effective habits.
+    path of a full-stack software developer.  
+
+
+    Personally I am deeply passionate about finding room for organization and
+    automation in everything I encounter ranging from my day time job to my
+    personal growth by working on building effective habits.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,

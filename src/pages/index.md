@@ -1,16 +1,18 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+title: Anmol Vijayvargiya
+image: /img/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: 'I build, I organize, I improve the experience of anything I meddle with.'
 mainpitch:
-  title: Why Kaldi
+  title: 'Hi Person from the Internet,'
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    I am a classic millennial geek living in Silicon Valley who's love and
+    appreciation of the great invention of the internet led him to follow the
+    path of a full-stack software developer.  Personally I am deeply passionate
+    about finding room for organization and automation in everything I encounter
+    ranging from my day time job to my personal growth by working on building
+    effective habits.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -68,3 +70,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+

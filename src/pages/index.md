@@ -1,15 +1,15 @@
 ---
 templateKey: index-page
 title: Anmol Vijayvargiya
-image: /img/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg
+image: /img/safar-safarov-MSN8TFhJ0is-unsplash.jpg
 heading: Great coffee with a conscience
 subheading: 'I build, I organize, I improve the experience of things I meddle with.'
 mainpitch:
   title: 'Hi internet surfers,'
   description: >
     I am a classic millennial geek living in Silicon Valley who's love and
-    appreciation of the great invention of the internet led him to follow the
-    path of a full-stack software developer.  
+    appreciation for the great invention called the internet led him to follow
+    the path of a full-stack software developer.  
 
 
     Personally I am deeply passionate about finding room for organization and

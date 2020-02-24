@@ -2,14 +2,12 @@
 templateKey: about-page
 title: "Hi there. My name is Anmol. Welcome to my home on the internet \U0001F913"
 ---
-![Anmol Vijayvargiya - Headshot Image](/img/IMG_1904.JPG "Anmol Vijayvargiya")
+![Anmol Vijayvargiya - Headshot Image](/img/ME_40.jpg "Anmol Vijayvargiya")
 
 ## What I am working on
 
 * 👨‍💻 I am a Software Engineer in California, US. I studies Computer Science & Engineering at Santa Clara University and graduated in 2018.
 * ✍️On this website I post tips and ideas I learn about from books and other resources I read and have found helpful over the years.
-
-
 
 ### Other Stuff
 

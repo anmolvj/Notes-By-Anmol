@@ -8,8 +8,8 @@ mainpitch:
   title: 'Hi internet surfers,'
   description: >
     I am a classic millennial geek living in Silicon Valley who's love and
-    appreciation for the great invention called internet led him to follow the
-    path of a full-stack software developer.  
+    appreciation for the great invention called the internet led him to follow
+    the path of a full-stack software developer.  
 
 
     Personally I am deeply passionate about finding room for organization and

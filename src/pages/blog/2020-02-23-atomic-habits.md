@@ -5,7 +5,7 @@ date: 2020-02-23T23:43:01.307Z
 description: >-
   A practical guide to finding queues in existing habits to insert new habits so
   they stick.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/atomic-habits-book-cover.jpg
 tags:
   - book

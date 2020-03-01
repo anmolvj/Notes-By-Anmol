@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Principles
+title: PRINCIPLES
 date: 2020-03-01T02:11:37.738Z
 description: >-
   Ray Dalio, one of the world's most successful investors and entrepreneurs,

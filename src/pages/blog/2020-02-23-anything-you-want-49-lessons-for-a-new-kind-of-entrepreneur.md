@@ -16,13 +16,12 @@ tags:
 
 ### Key takeaways from the book
 
-* Don't punish everyone for one person's mistake (don't make rules against your customers due to one bad experience with a customer)
+* Don't punish everyone for one person's mistake. Don’t impose rules for on your customers due to one bad experience with another one.
 * Proudly exclude people, proudly say what you are not. This will enable you to win the hearts of the people you want.
-* Ideas are just a multiplier of execution. The greatest of the idea are zero if not executed. Smallest of the idea have substance if you execute them.
-* Start now, no funding needed
-* Make messages funny and grandiose 😂 Use your humor.
-* It's about being someone, not having something (not outsourcing but enjoying the joy that comes with learning and doing it yourself)
-* Delegation Mindset: Teach, document, and make yourself unnecessary to the running of your company
+* The greatest of the idea are zero if not executed. Smallest of the idea have substance if you execute them. **Ideas are just a multiplier of execution.**
+* Make all forms of writing funny and grandiose within reason by using your humor.
+* It's about being someone, not having something. Do not outsource all tasks but rather enjoy the joy that comes with learning and doing it yourself.
+* `Delegation Mindset`: Teach, document, and make yourself unnecessary to the running of your company.
 * To be a business owner make sure that if you leave for a year and then come back your business will be in a better position before you left it.
 * In your company, you can make your role anything you want it to be. Anything you hate to do someone else loves. So find that person and let him do it.
-* Delegate but don't abdicate
+* ***Delegate*** but don't ***abdicate***.

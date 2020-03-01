@@ -5,7 +5,7 @@ date: 2020-02-23T23:52:53.861Z
 description: >-
   A journey of the Entrepreneur behind CD Baby and the things he learned along
   the way that helped him derive fulfillment through his endeavors.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/anything you want - derek sivers - book cover.jpeg
 tags:
   - Book

@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Anmol Vijayvargiya
-image: /img/joanna-kosinska-7ACuHoezUYk-unsplash (1).jpg
+image: /img/landing-page-banner.jpg
 heading: Great coffee with a conscience
 subheading: 'I build, I organize, I improve the experience of things I meddle with.'
 mainpitch:

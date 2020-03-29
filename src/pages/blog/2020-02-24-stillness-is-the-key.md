@@ -4,7 +4,7 @@ title: STILLNESS IS THE KEY
 author: Ryan Holiday
 date: 2020-02-24T00:03:53.983Z
 description: A doorway to a healthy and less anxious life using the practice of stillness.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/stillness is the key book cover.png
 tags:
   - book

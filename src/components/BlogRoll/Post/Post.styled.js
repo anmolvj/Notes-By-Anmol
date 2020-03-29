@@ -8,7 +8,6 @@ export const PostContainer = styled.div`
   flex-direction: column;
   padding: ${px2vw(20)};
   margin: ${px2vw(20)};
-  background-color: ${props => props.bgColor};
   height: 100%;
 
   @media (min-width: 768px) {
@@ -32,6 +31,7 @@ export const PostTitleContainer = styled.h3`
 
   @media (min-width: 1024px) {
     font-size: 1.5rem;
+    min-height: 4rem;
   }
 `;
 

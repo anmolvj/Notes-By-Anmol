@@ -8,13 +8,31 @@ import {
 
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-const Post = ({ post }) => (
-  <PostContainer bgColor="green">
-    <PostTitleContainer>{post.frontmatter.title}</PostTitleContainer>
-    <div>{post.frontmatter.date}</div>
-    <PostTextContainer>{post.excerpt}</PostTextContainer>
-  </PostContainer>
-);
+const Post = ({ post }) => {
+  // const {
+  //   frontmatter: { featuredpost, title, date, featuredimage },
+  //   excerpt,
+  //   fields: { slug }
+  // } = post.frontmatter;
+
+  return (
+    <PostContainer>
+      {post.frontmatter.featuredimage ? (
+        <div className="featured-thumbnail">
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: post.frontmatter.featuredimage,
+              alt: `featured image thumbnail for post ${post.frontmatter.title}`
+            }}
+          />
+        </div>
+      ) : null}
+      <PostTitleContainer>{post.frontmatter.title}</PostTitleContainer>
+      <div>{post.frontmatter.date}</div>
+      <PostTextContainer>{post.excerpt}</PostTextContainer>
+    </PostContainer>
+  );
+};
 
 // const Post = ({ post }) => (
 //   <div className="is-parent column is-6" key={post.id}>

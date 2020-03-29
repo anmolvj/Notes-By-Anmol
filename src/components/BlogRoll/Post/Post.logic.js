@@ -3,18 +3,17 @@ import { Link } from "gatsby";
 import {
   PostContainer,
   PostTitleContainer,
-  PostTextContainer
+  PostTitleTextContainer,
+  PostTextContainer,
+  KeepReadingLinkContainer,
+  FeaturedPostIconLeft,
+  FeaturedPostIconRight,
+  DateText,
+  DateIcon
 } from "./Post.styled";
-
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const Post = ({ post }) => {
-  // const {
-  //   frontmatter: { featuredpost, title, date, featuredimage },
-  //   excerpt,
-  //   fields: { slug }
-  // } = post.frontmatter;
-
   return (
     <PostContainer>
       {post.frontmatter.featuredimage ? (
@@ -27,54 +26,26 @@ const Post = ({ post }) => {
           />
         </div>
       ) : null}
-      <PostTitleContainer>{post.frontmatter.title}</PostTitleContainer>
-      <div>{post.frontmatter.date}</div>
+      <PostTitleContainer>
+        {post.frontmatter.featuredpost && <FeaturedPostIconLeft />}
+        <Link to={post.fields.slug}>
+          <PostTitleTextContainer>
+            {post.frontmatter.title}
+          </PostTitleTextContainer>
+        </Link>
+
+        {post.frontmatter.featuredpost && <FeaturedPostIconRight />}
+      </PostTitleContainer>
+      <DateText>
+        <DateIcon />
+        {post.frontmatter.date}
+      </DateText>
       <PostTextContainer>{post.excerpt}</PostTextContainer>
+      <Link to={post.fields.slug}>
+        <KeepReadingLinkContainer>Keep Reading →</KeepReadingLinkContainer>
+      </Link>
     </PostContainer>
   );
 };
-
-// const Post = ({ post }) => (
-//   <div className="is-parent column is-6" key={post.id}>
-//     <article
-//       className={`blog-list-item tile is-child box notification ${
-//         post.frontmatter.featuredpost ? 'is-featured' : ''
-//       }`}
-//     >
-//       <header>
-//         {post.frontmatter.featuredimage ? (
-//           <div className="featured-thumbnail">
-//             <PreviewCompatibleImage
-//               imageInfo={{
-//                 image: post.frontmatter.featuredimage,
-//                 alt: `featured image thumbnail for post ${post.frontmatter.title}`
-//               }}
-//             />
-//           </div>
-//         ) : null}
-//         <p className="post-meta">
-//           <Link
-//             className="title has-text-primary is-size-4"
-//             to={post.fields.slug}
-//           >
-//             {post.frontmatter.title}
-//           </Link>
-//           <span> &bull; </span>
-//           <span className="subtitle is-size-5 is-block">
-//             {post.frontmatter.date}
-//           </span>
-//         </p>
-//       </header>
-//       <p>
-//         {post.excerpt}
-//         <br />
-//         <br />
-//         <Link className="button" to={post.fields.slug}>
-//           Keep Reading →
-//         </Link>
-//       </p>
-//     </article>
-//   </div>
-// );
 
 export default Post;

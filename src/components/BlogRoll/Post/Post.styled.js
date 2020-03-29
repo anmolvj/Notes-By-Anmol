@@ -42,6 +42,8 @@ export const PostTitleContainer = styled.h3`
 export const PostTitleTextContainer = styled.div`
   /* color: #cc3700; */
   color: #0f233c;
+  text-decoration: underline;
+  text-decoration-color: #0f233c;
 `;
 
 export const PostTextContainer = styled.p`

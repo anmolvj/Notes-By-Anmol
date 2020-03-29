@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
+import { BlogRollContainer } from "./BlogRoll.styled";
 import Post from "./Post";
 
 class BlogRoll extends React.Component {
@@ -9,9 +10,9 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
+      <BlogRollContainer>
         {posts && posts.map(({ node: post }) => <Post post={post} />)}
-      </div>
+      </BlogRollContainer>
     );
   }
 }

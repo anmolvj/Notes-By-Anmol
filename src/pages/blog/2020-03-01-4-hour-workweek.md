@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
-title: 4 HOUR WORKWEEK
+title: THE 4 HOUR WORKWEEK
+author: Timothy Ferriss
 date: 2020-03-01T01:57:42.682Z
 description: >-
   A step-by-step blueprint to free yourself from the shackles of a corporate

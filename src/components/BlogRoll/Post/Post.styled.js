@@ -1,9 +1,11 @@
+import Paper from "@material-ui/core/Paper";
+import Divider from "@material-ui/core/Divider";
 import styled from "styled-components";
 import px2vw from "../../../utils/px2vw";
-import { FaAward } from "react-icons/fa";
+import { FaAward, FaBookReader } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 
-export const PostContainer = styled.div`
+export const PostContainer = styled(Paper)`
   display: flex;
   width: ${px2vw(320, 320)};
   min-height: ${px2vw(200, 320)};
@@ -11,7 +13,7 @@ export const PostContainer = styled.div`
   padding: ${px2vw(20)};
   margin: ${px2vw(20)};
   height: 100%;
-
+  background-color: ${props => props.bgColor || "#f2f2f2"};
   @media (min-width: 768px) {
     width: ${px2vw(320, 768)};
     min-height: ${px2vw(200, 768)};
@@ -38,7 +40,8 @@ export const PostTitleContainer = styled.h3`
 `;
 
 export const PostTitleTextContainer = styled.div`
-  color: #cc3700;
+  /* color: #cc3700; */
+  color: #0f233c;
 `;
 
 export const PostTextContainer = styled.p`
@@ -53,12 +56,14 @@ export const PostTextContainer = styled.p`
 
 export const KeepReadingLinkContainer = styled.span`
   font-weight: bold;
-  font-size: 1.7rem;
-  border: 1.5px solid #333;
+  font-size: 1.5rem;
+  border: 1px solid #999;
   border-radius: 0.25rem;
   padding: 5px 10px 5px 10px;
+  background-color: white;
+  color: #333;
   @media (min-width: 1024px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 
@@ -85,4 +90,14 @@ export const DateIcon = styled(MdDateRange)`
   right: 5px;
   height: 1.5rem;
   width: 1.5rem;
+`;
+
+export const KeepReadingIcon = styled(FaBookReader)`
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+`;
+
+export const StyledDivider = styled(Divider)`
+  margin-bottom: 10px;
 `;

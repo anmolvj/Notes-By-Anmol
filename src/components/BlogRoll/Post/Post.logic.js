@@ -9,22 +9,25 @@ import {
   FeaturedPostIconLeft,
   FeaturedPostIconRight,
   DateText,
-  DateIcon
+  DateIcon,
+  KeepReadingIcon,
+  StyledDivider
 } from "./Post.styled";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const Post = ({ post }) => {
   return (
-    <PostContainer>
+    <PostContainer
+      elevation={3}
+      bgColor={post.frontmatter.featuredpost && "#ffede6"}
+    >
       {post.frontmatter.featuredimage ? (
-        <div className="featured-thumbnail">
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: post.frontmatter.featuredimage,
-              alt: `featured image thumbnail for post ${post.frontmatter.title}`
-            }}
-          />
-        </div>
+        <PreviewCompatibleImage
+          imageInfo={{
+            image: post.frontmatter.featuredimage,
+            alt: `featured image thumbnail for post ${post.frontmatter.title}`
+          }}
+        />
       ) : null}
       <PostTitleContainer>
         {post.frontmatter.featuredpost && <FeaturedPostIconLeft />}
@@ -36,13 +39,17 @@ const Post = ({ post }) => {
 
         {post.frontmatter.featuredpost && <FeaturedPostIconRight />}
       </PostTitleContainer>
+      <StyledDivider />
       <DateText>
         <DateIcon />
         {post.frontmatter.date}
       </DateText>
       <PostTextContainer>{post.excerpt}</PostTextContainer>
       <Link to={post.fields.slug}>
-        <KeepReadingLinkContainer>Keep Reading →</KeepReadingLinkContainer>
+        <KeepReadingLinkContainer>
+          <KeepReadingIcon />
+          Keep Reading →
+        </KeepReadingLinkContainer>
       </Link>
     </PostContainer>
   );

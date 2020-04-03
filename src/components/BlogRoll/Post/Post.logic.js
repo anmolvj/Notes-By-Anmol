@@ -21,14 +21,14 @@ const Post = ({ post }) => {
       elevation={3}
       bgColor={post.frontmatter.featuredpost && "#ffede6"}
     >
-      {post.frontmatter.featuredimage ? (
+      {/* {post.frontmatter.featuredimage ? (
         <PreviewCompatibleImage
           imageInfo={{
             image: post.frontmatter.featuredimage,
             alt: `featured image thumbnail for post ${post.frontmatter.title}`
           }}
         />
-      ) : null}
+      ) : null} */}
       <PostTitleContainer>
         {post.frontmatter.featuredpost && <FeaturedPostIconLeft />}
         <Link to={post.fields.slug}>

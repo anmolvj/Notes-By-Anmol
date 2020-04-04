@@ -35,14 +35,22 @@ const Post = ({ post }) => {
             bgColor={post.frontmatter.featuredpost && '#ffede6'}
         >
             <CardActionArea disableRipple>
-                <CardMedia
+                {/* <CardMedia
                     className={classes.media}
                     image={
                         post.frontmatter.featuredimage ||
                         '/static/images/cards/contemplative-reptile.jpg'
                     }
                     title="Contemplative Reptile"
-                />
+                /> */}
+                {post.frontmatter.featuredimage ? (
+                    <PreviewCompatibleImage
+                        imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${post.frontmatter.title}`
+                        }}
+                    />
+                ) : null}
                 <CardContent>
                     <Typography noWrap gutterBottom variant="h5" component="h2">
                         {post.frontmatter.title}

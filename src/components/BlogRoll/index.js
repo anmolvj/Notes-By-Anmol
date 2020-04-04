@@ -1,3 +1,3 @@
-import BlogRoll from "./BlogRoll.logic";
+import BlogRoll from './BlogRoll.logic'
 
-export default BlogRoll;
+export default BlogRoll

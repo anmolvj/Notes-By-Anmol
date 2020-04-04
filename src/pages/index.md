@@ -1,11 +1,12 @@
 ---
 templateKey: index-page
-title: Anmol Vijayvargiya
+fname: Anmol
+lname: Vijayvargiya
 image: /img/landing-page-banner.jpg
 heading: Great coffee with a conscience
-subheading: 'I build, I organize, I improve the experience.'
+subheading: "I build, I organize, I improve the experience."
 mainpitch:
-  title: 'Hi internet surfers,'
+  title: "Hi internet surfers,"
   description: >
     I am a classic millennial geek living in Silicon Valley who's love and
     appreciation for the great invention called the internet led him to follow

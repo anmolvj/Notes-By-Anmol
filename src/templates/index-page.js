@@ -8,10 +8,43 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 const MyName = styled.h1`
-  font-family: "Dancing Script";
-  color: white;
+  font-size: 5 rem;
   text-align: center;
 `;
+
+const MainContainer = styled.div``;
+
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    font-size: 6rem;
+  }
+  @media (min-width: 800px) {
+    font-size: 6.5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 8rem;
+  }
+`;
+
+const FnameContainer = styled.div`
+  @media (min-width: 768px) {
+    margin-right: 1rem;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 2rem;
+  }
+`;
+const LnameContainer = styled.div``;
 
 const OpenerUnderName = styled.h3`
   color: white;
@@ -20,96 +53,26 @@ const OpenerUnderName = styled.h3`
 
 export const IndexPageTemplate = ({
   image,
-  title,
+  fname,
+  lname,
   heading,
   subheading,
   mainpitch,
   description,
   intro
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
-        }}
-      >
-        <MyName className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {title}
-        </MyName>
-        <OpenerUnderName className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </OpenerUnderName>
-      </div>
-    </div>
-
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                {/* <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div> */}
-                {/* <Features gridItems={intro.blurbs} /> */}
-                {/* <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div> */}
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest Posts
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <MainContainer>
+    <NameContainer>
+      <FnameContainer>{fname}</FnameContainer>
+      <LnameContainer>{lname}</LnameContainer>
+    </NameContainer>
+  </MainContainer>
 );
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
+  fname: PropTypes.string,
+  lname: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
@@ -126,7 +89,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
+        fname={frontmatter.fname}
+        lname={frontmatter.lname}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
@@ -151,7 +115,8 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
+        fname
+        lname
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

@@ -44,7 +44,9 @@ const Post = ({ post }) => {
                 <DateIcon />
                 {post.frontmatter.date}
             </DateText>
-            <PostTextContainer>{post.excerpt}</PostTextContainer>
+            <PostTextContainer>
+                {post.frontmatter.description}
+            </PostTextContainer>
             <Link to={post.fields.slug}>
                 <KeepReadingLinkContainer>
                     <KeepReadingIcon />

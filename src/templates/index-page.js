@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-
+import { GiSpellBook } from 'react-icons/gi'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -78,7 +78,9 @@ export const IndexPageTemplate = ({
             <OpenerUnderName>{subheading}</OpenerUnderName>
         </BannerContainer>
         <BlogRollContainer>
-            <BlogRollHeader>Latest Posts ✍️</BlogRollHeader>
+            <BlogRollHeader>
+                Latest Posts <GiSpellBook />
+            </BlogRollHeader>
             <BlogRoll />
             <div className="column is-12 has-text-centered">
                 <Link className="btn" to="/blog">

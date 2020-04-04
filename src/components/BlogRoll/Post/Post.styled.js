@@ -1,11 +1,14 @@
-import Paper from '@material-ui/core/Paper'
+import Card from '@material-ui/core/Card'
 import Divider from '@material-ui/core/Divider'
 import styled from 'styled-components'
 import px2vw from '../../../utils/px2vw'
 import { FaAward, FaBookReader } from 'react-icons/fa'
+import { GiBookCover } from 'react-icons/gi'
 import { MdDateRange } from 'react-icons/md'
 
-export const PostContainer = styled(Paper)`
+export const StyledCard = styled(Card)`
+background-color: #1a1a1a;
+    font-family: 'Nunito';
     display: flex;
     width: ${px2vw(320, 320)};
     min-height: ${px2vw(200, 320)};
@@ -13,7 +16,7 @@ export const PostContainer = styled(Paper)`
     padding: ${px2vw(20)};
     margin: ${px2vw(20)};
     height: 100%;
-    background-color: ${props => props.bgColor || '#f2f2f2'};
+    /* background-color: ${props => props.bgColor || '#f2f2f2'}; */
     @media (min-width: 768px) {
         width: ${px2vw(320, 768)};
         min-height: ${px2vw(200, 768)};
@@ -94,10 +97,10 @@ export const DateIcon = styled(MdDateRange)`
     width: 1.5rem;
 `
 
-export const KeepReadingIcon = styled(FaBookReader)`
-    margin-right: 10px;
+export const KeepReadingIcon = styled(GiBookCover)`
     position: relative;
-    top: 2px;
+    height: 1.5rem;
+    width: 1.5rem;
 `
 
 export const StyledDivider = styled(Divider)`

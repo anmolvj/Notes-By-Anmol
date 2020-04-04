@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Button, CardActionArea, Link } from 'gatsby-theme-material-ui'
 import {
     StyledCard,
     PostTitleContainer,
@@ -15,9 +15,7 @@ import {
     StyledCardMedia
 } from './Post.styled'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
-import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -36,7 +34,7 @@ const Post = ({ post }) => {
             elevation={3}
             bgColor={post.frontmatter.featuredpost && '#ffede6'}
         >
-            <CardActionArea>
+            <CardActionArea disableRipple>
                 <CardMedia
                     className={classes.media}
                     image={
@@ -46,16 +44,9 @@ const Post = ({ post }) => {
                     title="Contemplative Reptile"
                 />
                 <CardContent>
-                    <Link to={post.fields.slug}>
-                        <Typography
-                            noWrap
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
-                        >
-                            {post.frontmatter.title}
-                        </Typography>
-                    </Link>
+                    <Typography noWrap gutterBottom variant="h5" component="h2">
+                        {post.frontmatter.title}
+                    </Typography>
 
                     <Typography noWrap gutterBottom variant="subtitle1">
                         {post.frontmatter.date}

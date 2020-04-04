@@ -15,8 +15,36 @@ module.exports = {
                 }
             }
         },
-
-        `gatsby-plugin-styled-components`,
+        {
+            resolve: `gatsby-theme-material-ui`,
+            options: {
+                webFontsConfig: {
+                    fonts: {
+                        google: [
+                            {
+                                family: `Montserrat`,
+                                variants: [`300`, `400`, `500`]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            resolve: `gatsby-theme-material-ui`,
+            options: {
+                webFontsConfig: {
+                    fonts: {
+                        google: [
+                            {
+                                family: `Montserrat`,
+                                variants: [`300`, `400`, `500`]
+                            }
+                        ]
+                    }
+                }
+            }
+        }`gatsby-plugin-styled-components`,
         {
             // keep as first gatsby-source-filesystem plugin for gatsby image support
             resolve: 'gatsby-source-filesystem',

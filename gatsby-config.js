@@ -8,21 +8,16 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
-            resolve: 'gatsby-plugin-material-ui',
+            resolve: `gatsby-theme-material-ui`,
             options: {
                 stylesProvider: {
                     injectFirst: true
-                }
-            }
-        },
-        {
-            resolve: `gatsby-theme-material-ui`,
-            options: {
+                },
                 webFontsConfig: {
                     fonts: {
                         google: [
                             {
-                                family: `Montserrat`,
+                                family: `Nunito`,
                                 variants: [`300`, `400`, `500`]
                             }
                         ]
@@ -30,21 +25,7 @@ module.exports = {
                 }
             }
         },
-        {
-            resolve: `gatsby-theme-material-ui`,
-            options: {
-                webFontsConfig: {
-                    fonts: {
-                        google: [
-                            {
-                                family: `Montserrat`,
-                                variants: [`300`, `400`, `500`]
-                            }
-                        ]
-                    }
-                }
-            }
-        }`gatsby-plugin-styled-components`,
+        `gatsby-plugin-styled-components`,
         {
             // keep as first gatsby-source-filesystem plugin for gatsby image support
             resolve: 'gatsby-source-filesystem',

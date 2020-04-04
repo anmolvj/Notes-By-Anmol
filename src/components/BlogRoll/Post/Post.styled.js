@@ -7,6 +7,8 @@ import { GiBookCover } from 'react-icons/gi'
 import { MdDateRange } from 'react-icons/md'
 
 export const StyledCard = styled(Card)`
+background-color: #1a1a1a;
+    font-family: 'Nunito';
     display: flex;
     width: ${px2vw(320, 320)};
     min-height: ${px2vw(200, 320)};

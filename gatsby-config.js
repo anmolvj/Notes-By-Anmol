@@ -1,86 +1,86 @@
 module.exports = {
-  siteMetadata: {
-    title: "Anmol Vijayvargiya",
-    description:
-      "I am a classic millennial geek living in Silicon Valley who's love and appreciation of the great invention of the internet led him to follow the path of a full-stack software developer."
-  },
-  plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-material-ui",
-      options: {
-        stylesProvider: {
-          injectFirst: true
-        }
-      }
+    siteMetadata: {
+        title: 'Anmol Vijayvargiya',
+        description:
+            "I am a classic millennial geek living in Silicon Valley who's love and appreciation of the great invention of the internet led him to follow the path of a full-stack software developer."
     },
-    `gatsby-plugin-styled-components`,
-    {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/static/img`,
-        name: "uploads"
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/img`,
-        name: "images"
-      }
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-relative-images",
+    plugins: [
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sass',
+        {
+            resolve: 'gatsby-plugin-material-ui',
             options: {
-              name: "uploads"
+                stylesProvider: {
+                    injectFirst: true
+                }
             }
-          },
-          {
-            resolve: "gatsby-remark-images",
+        },
+        `gatsby-plugin-styled-components`,
+        {
+            // keep as first gatsby-source-filesystem plugin for gatsby image support
+            resolve: 'gatsby-source-filesystem',
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048
+                path: `${__dirname}/static/img`,
+                name: 'uploads'
             }
-          },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
             options: {
-              destinationDir: "static"
+                path: `${__dirname}/src/pages`,
+                name: 'pages'
             }
-          }
-        ]
-      }
-    },
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    },
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
-};
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/img`,
+                name: 'images'
+            }
+        },
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-relative-images',
+                        options: {
+                            name: 'uploads'
+                        }
+                    },
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
+                            maxWidth: 2048
+                        }
+                    },
+                    {
+                        resolve: 'gatsby-remark-copy-linked-files',
+                        options: {
+                            destinationDir: 'static'
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/cms/cms.js`
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+            options: {
+                develop: true, // Activates purging in npm run develop
+                purgeOnly: ['/all.sass'] // applies purging only on the bulma css file
+            }
+        }, // must be after other CSS plugins
+        'gatsby-plugin-netlify' // make sure to keep it last in the array
+    ]
+}

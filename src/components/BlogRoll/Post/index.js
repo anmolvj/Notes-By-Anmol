@@ -1,3 +1,3 @@
-import Post from "./Post.logic";
+import Post from './Post.logic'
 
-export default Post;
+export default Post

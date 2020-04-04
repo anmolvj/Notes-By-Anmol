@@ -4,7 +4,7 @@ fname: Anmol
 lname: Vijayvargiya
 image: /img/landing-page-banner.jpg
 heading: Great coffee with a conscience
-subheading: "I build, I organize, I improve the experience."
+subheading: "This is a space for my notes from the audio books I listened."
 mainpitch:
   title: "Hi internet surfers,"
   description: >

@@ -7,12 +7,9 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
-const MyName = styled.h1`
-  font-size: 5 rem;
-  text-align: center;
-`;
-
 const MainContainer = styled.div``;
+
+const BannerContainer = styled.div``;
 
 const NameContainer = styled.div`
   display: flex;
@@ -47,10 +44,21 @@ const FnameContainer = styled.div`
 const LnameContainer = styled.div``;
 
 const OpenerUnderName = styled.h3`
-  color: white;
+  padding: 5px;
   text-align: center;
+  font-size: 1rem;
 `;
 
+const BlogRollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+`;
+const BlogRollHeader = styled.div`
+  font-size: 2rem;
+  margin: 20px auto;
+`;
 export const IndexPageTemplate = ({
   image,
   fname,
@@ -62,10 +70,22 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <MainContainer>
-    <NameContainer>
-      <FnameContainer>{fname}</FnameContainer>
-      <LnameContainer>{lname}</LnameContainer>
-    </NameContainer>
+    <BannerContainer>
+      <NameContainer>
+        <FnameContainer>{fname}</FnameContainer>
+        <LnameContainer>{lname}</LnameContainer>
+      </NameContainer>
+      <OpenerUnderName>{subheading}</OpenerUnderName>
+    </BannerContainer>
+    <BlogRollContainer>
+      <BlogRollHeader>Latest Posts ✍️</BlogRollHeader>
+      <BlogRoll />
+      <div className="column is-12 has-text-centered">
+        <Link className="btn" to="/blog">
+          Read more
+        </Link>
+      </div>
+    </BlogRollContainer>
   </MainContainer>
 );
 

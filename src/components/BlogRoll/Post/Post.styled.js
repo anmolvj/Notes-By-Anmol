@@ -3,6 +3,7 @@ import Divider from '@material-ui/core/Divider'
 import styled from 'styled-components'
 import px2vw from '../../../utils/px2vw'
 import { FaAward, FaBookReader } from 'react-icons/fa'
+import { GiBookCover } from 'react-icons/gi'
 import { MdDateRange } from 'react-icons/md'
 
 export const PostContainer = styled(Paper)`
@@ -94,10 +95,12 @@ export const DateIcon = styled(MdDateRange)`
     width: 1.5rem;
 `
 
-export const KeepReadingIcon = styled(FaBookReader)`
+export const KeepReadingIcon = styled(GiBookCover)`
     margin-right: 10px;
     position: relative;
-    top: 2px;
+    top: 5px;
+    height: 1.5rem;
+    width: 1.5rem;
 `
 
 export const StyledDivider = styled(Divider)`

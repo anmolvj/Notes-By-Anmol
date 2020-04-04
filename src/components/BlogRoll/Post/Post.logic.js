@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import {
-    PostContainer,
+    StyledCard,
     PostTitleContainer,
     PostTitleTextContainer,
     PostTextContainer,
@@ -11,49 +11,77 @@ import {
     DateText,
     DateIcon,
     KeepReadingIcon,
-    StyledDivider
+    StyledDivider,
+    StyledCardMedia
 } from './Post.styled'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+
+const useStyles = makeStyles({
+    media: {
+        height: 140
+    }
+})
 
 const Post = ({ post }) => {
+    const classes = useStyles()
     return (
-        <PostContainer
+        <StyledCard
             elevation={3}
             bgColor={post.frontmatter.featuredpost && '#ffede6'}
         >
-            {/* {post.frontmatter.featuredimage ? (
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: post.frontmatter.featuredimage,
-            alt: `featured image thumbnail for post ${post.frontmatter.title}`
-          }}
-        />
-      ) : null} */}
-            <PostTitleContainer>
-                {post.frontmatter.featuredpost && <FeaturedPostIconLeft />}
-                <Link to={post.fields.slug}>
-                    <PostTitleTextContainer>
-                        {post.frontmatter.title}
-                    </PostTitleTextContainer>
-                </Link>
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image={
+                        post.frontmatter.featuredimage ||
+                        '/static/images/cards/contemplative-reptile.jpg'
+                    }
+                    title="Contemplative Reptile"
+                />
+                <CardContent>
+                    <Link to={post.fields.slug}>
+                        <Typography
+                            noWrap
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                        >
+                            {post.frontmatter.title}
+                        </Typography>
+                    </Link>
 
-                {post.frontmatter.featuredpost && <FeaturedPostIconRight />}
-            </PostTitleContainer>
-            <StyledDivider />
-            <DateText>
-                <DateIcon />
-                {post.frontmatter.date}
-            </DateText>
-            <PostTextContainer>
-                {post.frontmatter.description}
-            </PostTextContainer>
-            <Link to={post.fields.slug}>
-                <KeepReadingLinkContainer>
-                    <KeepReadingIcon />
-                    Keep Reading →
-                </KeepReadingLinkContainer>
-            </Link>
-        </PostContainer>
+                    <Typography noWrap gutterBottom variant="subtitle1">
+                        {post.frontmatter.date}
+                    </Typography>
+                    <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        rowsMax={3}
+                    >
+                        {post.frontmatter.description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Link to={post.fields.slug}>
+                    <Button
+                        size="small"
+                        color="primary"
+                        startIcon={<KeepReadingIcon />}
+                    >
+                        Keep Reading →
+                    </Button>
+                </Link>
+            </CardActions>
+        </StyledCard>
     )
 }
 

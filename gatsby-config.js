@@ -15,6 +15,7 @@ module.exports = {
                 }
             }
         },
+
         `gatsby-plugin-styled-components`,
         {
             // keep as first gatsby-source-filesystem plugin for gatsby image support

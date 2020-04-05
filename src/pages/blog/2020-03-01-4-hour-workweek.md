@@ -7,7 +7,7 @@ description: >-
   A step-by-step blueprint to free yourself from the shackles of a corporate
   job, create a business to fund the lifestyle of your dreams, and live life
   like a millionaire, without actually having to be one.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/four-hour-work-week-book-cover.jpg
 tags:
   - book

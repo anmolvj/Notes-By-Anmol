@@ -6,11 +6,18 @@ import { GiSpellBook } from 'react-icons/gi'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-
+import Button from '@material-ui/core/Button'
+import { IoMdArrowRoundForward } from 'react-icons/io'
+import { AiOutlineRead } from 'react-icons/ai'
 const MainContainer = styled.div``
 
 const BannerContainer = styled.div``
-
+const ReadMoreButton = styled(Button)`
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Nunito;
+`
 const NameContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -83,8 +90,15 @@ export const IndexPageTemplate = ({
             </BlogRollHeader>
             <BlogRoll />
             <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/blog">
-                    Read more
+                <Link to="/blog">
+                    <ReadMoreButton
+                        variant="text"
+                        startIcon={<AiOutlineRead />}
+                        endIcon={<IoMdArrowRoundForward />}
+                        size="large"
+                    >
+                        Read more
+                    </ReadMoreButton>
                 </Link>
             </div>
         </BlogRollContainer>

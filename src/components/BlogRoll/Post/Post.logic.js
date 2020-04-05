@@ -22,12 +22,12 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import px2vw from '../../../utils/px2vw'
+import Badge from '@material-ui/core/Badge'
 
 const TypographyNunito = styled(Typography)`
     font-family: 'Nunito';
     color: white;
 `
-
 const useStyles = makeStyles({
     media: {
         maxHeight: 140
@@ -39,6 +39,15 @@ const useStyles = makeStyles({
     }
 })
 
+const FeaturedTag = styled.div`
+    position: absolute;
+    top: 0;
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 0.7rem;
+`
+
 const Post = ({ post }) => {
     const classes = useStyles()
     return (
@@ -46,6 +55,9 @@ const Post = ({ post }) => {
             elevation={3}
             bgColor={post.frontmatter.featuredpost && '#ffede6'}
         >
+            {post.frontmatter.featuredpost && (
+                <FeaturedTag>FEATURED</FeaturedTag>
+            )}
             {/* <CardMedia
                     className={classes.media}
                     children={

@@ -1,8 +1,21 @@
 import React from 'react'
-
+import styled from 'styled-components'
+import { GiSpellBook } from 'react-icons/gi'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
+const BlogPageHeader = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    margin: 20px auto;
+    font-weight: bold;
+`
+
+const BookIcon = styled(GiSpellBook)`
+    font-size: 7rem;
+`
 export default class BlogIndexPage extends React.Component {
     render() {
         return (
@@ -25,6 +38,10 @@ export default class BlogIndexPage extends React.Component {
                         Latest Posts
                     </h1>
                 </div> */}
+                <BlogPageHeader>
+                    <BookIcon />
+                    All Posts
+                </BlogPageHeader>
                 <section className="section">
                     <div className="container">
                         <BlogRoll />

@@ -65,6 +65,7 @@ const BlogRollContainer = styled.div`
 const BlogRollHeader = styled.div`
     font-size: 2rem;
     margin: 20px auto;
+    font-weight: bold;
 `
 export const IndexPageTemplate = ({
     image,

@@ -9,7 +9,7 @@ class BlogRoll extends React.Component {
         const { data } = this.props
         const { edges: posts } = data.allMarkdownRemark
         let showAll = false
-        if (window.location.pathname) {
+        if (window && window.location) {
             showAll = window.location.pathname === '/blog'
         }
         return (

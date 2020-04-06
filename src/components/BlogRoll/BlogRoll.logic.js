@@ -4,26 +4,20 @@ import { graphql, StaticQuery } from 'gatsby'
 import { BlogRollContainer } from './BlogRoll.styled'
 import Post from './Post'
 
-class BlogRoll extends React.Component {
-    render() {
-        const { data } = this.props
-        const { edges: posts } = data.allMarkdownRemark
-        let showAll = false
-        if (typeof window !== undefined) {
-            showAll = window.location.href.split('/').pop() === 'blog'
-            console.log('href = ', window.location.href.split('/').pop())
-        }
-        return (
-            <BlogRollContainer>
-                {posts &&
-                    posts.map(({ node: post }, idx) => {
-                        if (showAll || idx < 4) {
-                            return <Post post={post} />
-                        }
-                    })}
-            </BlogRollContainer>
-        )
-    }
+export const BlogRoll = props => {
+    const { data, showAll } = props
+    console.log('SHOW ALL I RECEIVED - ', props)
+    const { edges: posts } = data.allMarkdownRemark
+    return (
+        <BlogRollContainer>
+            {posts &&
+                posts.map(({ node: post }, idx) => {
+                    if (showAll || idx < 4) {
+                        return <Post post={post} />
+                    }
+                })}
+        </BlogRollContainer>
+    )
 }
 
 BlogRoll.propTypes = {
@@ -34,7 +28,7 @@ BlogRoll.propTypes = {
     })
 }
 
-export default () => (
+export default ({ showAll }) => (
     <StaticQuery
         query={graphql`
             query BlogRollQuery {
@@ -70,6 +64,8 @@ export default () => (
                 }
             }
         `}
-        render={(data, count) => <BlogRoll data={data} count={count} />}
+        render={(data, count) => (
+            <BlogRoll data={data} count={count} showAll={showAll} />
+        )}
     />
 )

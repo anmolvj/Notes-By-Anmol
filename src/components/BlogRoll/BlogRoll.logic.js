@@ -8,10 +8,15 @@ class BlogRoll extends React.Component {
     render() {
         const { data } = this.props
         const { edges: posts } = data.allMarkdownRemark
-
+        const showAll = window.location.pathname === '/blog'
         return (
             <BlogRollContainer>
-                {posts && posts.map(({ node: post }) => <Post post={post} />)}
+                {posts &&
+                    posts.map(({ node: post }, idx) => {
+                        if (showAll || idx < 4) {
+                            return <Post post={post} />
+                        }
+                    })}
             </BlogRollContainer>
         )
     }

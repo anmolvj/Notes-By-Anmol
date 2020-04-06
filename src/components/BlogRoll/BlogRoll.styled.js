@@ -8,10 +8,10 @@ export const BlogRollContainer = styled.div`
     margin: ${px2vw(32)};
     max-width: 100%;
 
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
         &::after {
             content: '';
             flex: auto;
         }
-    }
+    } */
 `

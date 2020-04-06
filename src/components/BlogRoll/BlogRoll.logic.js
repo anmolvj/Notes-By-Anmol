@@ -6,7 +6,6 @@ import Post from './Post'
 
 export const BlogRoll = props => {
     const { data, showAll } = props
-    console.log('SHOW ALL I RECEIVED - ', props)
     const { edges: posts } = data.allMarkdownRemark
     return (
         <BlogRollContainer>

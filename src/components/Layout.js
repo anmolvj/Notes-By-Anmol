@@ -28,11 +28,11 @@ const TemplateWrapper = ({ children }) => {
                 <title>{title}</title>
                 <meta name="description" content={description} />
 
-                <link
+                {/* <link
                     rel="apple-touch-icon"
                     sizes="180x180"
                     href={`${withPrefix('/')}img/apple-touch-icon.png`}
-                />
+                /> */}
                 {/* <link
           rel="icon"
           type="image/png"
@@ -46,11 +46,11 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         /> */}
 
-                <link
+                {/* <link
                     rel="mask-icon"
                     href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
                     color="#ff4400"
-                />
+                /> */}
                 <link
                     href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap"
                     rel="stylesheet"
@@ -69,10 +69,10 @@ const TemplateWrapper = ({ children }) => {
                 <meta property="og:type" content="business.business" />
                 <meta property="og:title" content={title} />
                 <meta property="og:url" content="/" />
-                <meta
+                {/* <meta
                     property="og:image"
                     content={`${withPrefix('/')}img/og-image.jpg`}
-                />
+                /> */}
             </Helmet>
             <MainContainer>
                 <Navbar />

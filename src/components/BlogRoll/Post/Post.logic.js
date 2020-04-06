@@ -28,6 +28,11 @@ const TypographyNunito = styled(Typography)`
     font-family: 'Nunito';
     color: white;
 `
+
+const PostTitle = styled(TypographyNunito)`
+    color: yellow;
+    margin-top: 10px;
+`
 const useStyles = makeStyles({
     media: {
         maxHeight: 140
@@ -75,14 +80,9 @@ const Post = ({ post }) => {
 
             <CardContent>
                 <Link to={post.fields.slug}>
-                    <TypographyNunito
-                        noWrap
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                    >
+                    <PostTitle noWrap gutterBottom variant="h5" component="h2">
                         {post.frontmatter.title}
-                    </TypographyNunito>
+                    </PostTitle>
                 </Link>
                 <TypographyNunito noWrap gutterBottom variant="subtitle1">
                     {post.frontmatter.date}

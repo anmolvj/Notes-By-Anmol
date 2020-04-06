@@ -47,6 +47,7 @@ export const PostTitleTextContainer = styled.div`
     color: #0f233c;
     text-decoration: underline;
     text-decoration-color: #0f233c;
+    margin-top: 10px;
 `
 
 export const PostTextContainer = styled.p`

@@ -29,9 +29,14 @@ const TypographyNunito = styled(Typography)`
     color: white;
 `
 
+const colors = {
+    ETON_BLUE: '#87CBAC'
+}
+
 const PostTitle = styled(TypographyNunito)`
-    color: yellow;
+    color: ${colors.ETON_BLUE};
     margin-top: 10px;
+    font-weight: bold;
 `
 const useStyles = makeStyles({
     media: {

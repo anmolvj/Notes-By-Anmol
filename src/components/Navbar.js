@@ -3,8 +3,14 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import github from '../img/github-icon.svg'
 import linkedin from '../img/social/linkedin.svg'
+
+const colors = {
+    ETON_BLUE: '#87CBAC'
+}
+
 const MyName = styled.h1`
     font-family: 'Anton', sans-serif;
+    color: ${colors.ETON_BLUE};
 `
 
 const Navbar = class extends React.Component {

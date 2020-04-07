@@ -57,6 +57,7 @@ export default ({ showAll }) => (
                                     }
                                 }
                                 description
+                                tags
                             }
                         }
                     }

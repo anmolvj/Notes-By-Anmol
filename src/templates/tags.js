@@ -2,21 +2,38 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
+import styled from 'styled-components'
+import Avatar from '@material-ui/core/Avatar'
+const colors = {
+    ETON_BLUE: '#87CBAC',
+    CERULEAN_BLUE: '#3066BE'
+}
+const StyledAvatar = styled(Avatar)`
+    background-color: ${colors.ETON_BLUE};
+    color: white;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+`
+const StyledCard = styled(Card)`
+    padding: 1rem;
+`
 class TagRoute extends React.Component {
     render() {
         const posts = this.props.data.allMarkdownRemark.edges
         const postLinks = posts.map(post => (
-            <li key={post.node.fields.slug}>
+            <StyledCard raised key={post.node.fields.slug}>
                 <Link to={post.node.fields.slug}>
                     <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
                 </Link>
-            </li>
+            </StyledCard>
         ))
         const tag = this.props.pageContext.tag
         const title = this.props.data.site.siteMetadata.title
         const totalCount = this.props.data.allMarkdownRemark.totalCount
-        const tagHeader = `${totalCount} post${
+        const tagHeader = `${(<StyledAvatar>{totalCount}</StyledAvatar>)} post${
             totalCount === 1 ? '' : 's'
         } tagged with “${tag}”`
 
@@ -31,12 +48,13 @@ class TagRoute extends React.Component {
                                 style={{ marginBottom: '6rem' }}
                             >
                                 <h3 className="title is-size-4 is-bold-light">
-                                    {tagHeader}
+                                    <StyledAvatar>{totalCount}</StyledAvatar>{' '}
+                                    post(s) tagged with {tag}
                                 </h3>
                                 <ul className="taglist">{postLinks}</ul>
-                                <p>
+                                <Button variant="outlined">
                                     <Link to="/tags/">Browse all tags</Link>
-                                </p>
+                                </Button>
                             </div>
                         </div>
                     </div>

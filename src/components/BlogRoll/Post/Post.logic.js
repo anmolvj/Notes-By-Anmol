@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { kebabCase } from 'lodash'
 import { Button, CardActionArea, Link } from 'gatsby-theme-material-ui'
+import Chip from '@material-ui/core/Chip'
 import {
     StyledCard,
     PostTitleContainer,
@@ -24,28 +26,48 @@ import Typography from '@material-ui/core/Typography'
 import px2vw from '../../../utils/px2vw'
 import Badge from '@material-ui/core/Badge'
 
+const colors = {
+    ETON_BLUE: '#87CBAC',
+    CERULEAN_BLUE: '#3066BE'
+}
+
+const TagLink = styled(Link)`
+    &:hover {
+        text-decoration: none;
+    }
+`
 const TypographyNunito = styled(Typography)`
     font-family: 'Nunito';
     color: white;
 `
-
-const colors = {
-    ETON_BLUE: '#87CBAC'
-}
+const StyledChip = styled(Chip)`
+    background-color: #f0ddab;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 0.7rem;
+    &:hover {
+        color: ${colors.CERULEAN_BLUE};
+    }
+`
+const StyledChipContainer = styled.div`
+    margin-top: 1.25rem;
+    padding: 1rem;
+`
 
 const PostTitle = styled(TypographyNunito)`
     color: ${colors.ETON_BLUE};
     margin-top: 10px;
     font-weight: bold;
 `
+const DescriptionText = styled(TypographyNunito)`
+    height: 3em;
+    line-height: 1em;
+    overflow: hidden;
+`
 const useStyles = makeStyles({
     media: {
         maxHeight: 140
-    },
-    cardContent: {
-        root: {
-            padding: `${px2vw(20)}`
-        }
     }
 })
 
@@ -57,7 +79,6 @@ const FeaturedTag = styled.div`
     padding: 5px;
     font-size: 0.7rem;
 `
-
 const Post = ({ post }) => {
     const classes = useStyles()
     return (
@@ -92,15 +113,22 @@ const Post = ({ post }) => {
                 <TypographyNunito noWrap gutterBottom variant="subtitle1">
                     {post.frontmatter.date}
                 </TypographyNunito>
-                <TypographyNunito
+                <DescriptionText
                     variant="body2"
                     color="textSecondary"
                     component="p"
-                    rowsMax={3}
                 >
                     {post.frontmatter.description}
-                </TypographyNunito>
+                </DescriptionText>
             </CardContent>
+            <StyledChipContainer>
+                {post.frontmatter.tags &&
+                    post.frontmatter.tags.map(tag => (
+                        <TagLink to={`/tags/${kebabCase(tag)}/`}>
+                            <StyledChip size="small" label={tag} />
+                        </TagLink>
+                    ))}
+            </StyledChipContainer>
         </StyledCard>
     )
 }

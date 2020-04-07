@@ -1,11 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
+import Chip from '@material-ui/core/Chip'
+const colors = {
+    ETON_BLUE: '#87CBAC',
+    CERULEAN_BLUE: '#3066BE'
+}
+const StyledChip = styled(Chip)`
+    background-color: #f0ddab;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 0.7rem;
+    &:hover {
+        color: ${colors.CERULEAN_BLUE};
+    }
+`
+const TagLink = styled(Link)`
+    &:hover {
+        text-decoration: none;
+    }
+`
 export const BlogPostTemplate = ({
     content,
     contentComponent,
@@ -35,11 +56,11 @@ export const BlogPostTemplate = ({
                                 <ul className="taglist">
                                     {tags.map(tag => (
                                         <li key={tag + `tag`}>
-                                            <Link
+                                            <TagLink
                                                 to={`/tags/${kebabCase(tag)}/`}
                                             >
-                                                {tag}
-                                            </Link>
+                                                <StyledChip label={tag} />
+                                            </TagLink>
                                         </li>
                                     ))}
                                 </ul>

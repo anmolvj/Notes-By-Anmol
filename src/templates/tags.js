@@ -5,18 +5,8 @@ import Layout from '../components/Layout'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import styled from 'styled-components'
-import Avatar from '@material-ui/core/Avatar'
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
-}
-const StyledAvatar = styled(Avatar)`
-    background-color: ${colors.ETON_BLUE};
-    color: white;
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-`
+import TaggedWith from '../components/Tags/TaggedWith.logic'
+
 const StyledCard = styled(Card)`
     padding: 1rem;
 `
@@ -33,9 +23,6 @@ class TagRoute extends React.Component {
         const tag = this.props.pageContext.tag
         const title = this.props.data.site.siteMetadata.title
         const totalCount = this.props.data.allMarkdownRemark.totalCount
-        const tagHeader = `${(<StyledAvatar>{totalCount}</StyledAvatar>)} post${
-            totalCount === 1 ? '' : 's'
-        } tagged with “${tag}”`
 
         return (
             <Layout>
@@ -48,8 +35,7 @@ class TagRoute extends React.Component {
                                 style={{ marginBottom: '6rem' }}
                             >
                                 <h3 className="title is-size-4 is-bold-light">
-                                    <StyledAvatar>{totalCount}</StyledAvatar>{' '}
-                                    post(s) tagged with {tag}
+                                    <TaggedWith count={totalCount} tag={tag} />
                                 </h3>
                                 <ul className="taglist">{postLinks}</ul>
                                 <Button variant="outlined">

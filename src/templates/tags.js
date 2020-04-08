@@ -7,8 +7,17 @@ import Card from '@material-ui/core/Card'
 import styled from 'styled-components'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
 
+const colors = {
+    ETON_BLUE: '#87CBAC',
+    CERULEAN_BLUE: '#3066BE'
+}
+
 const StyledCard = styled(Card)`
     padding: 1rem;
+`
+const StyledBrowseAllTagsButton = styled(Button)`
+    color: ${colors.ETON_BLUE};
+    font-weight: bold;
 `
 class TagRoute extends React.Component {
     render() {
@@ -38,9 +47,9 @@ class TagRoute extends React.Component {
                                     <TaggedWith count={totalCount} tag={tag} />
                                 </h3>
                                 <ul className="taglist">{postLinks}</ul>
-                                <Button variant="outlined">
+                                <StyledBrowseAllTagsButton variant="text">
                                     <Link to="/tags/">Browse all tags</Link>
-                                </Button>
+                                </StyledBrowseAllTagsButton>
                             </div>
                         </div>
                     </div>

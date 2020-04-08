@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: 'Anmol Vijayvargiya',
+        title: 'Notes by Anmol',
         description:
-            "I am a classic millennial geek living in Silicon Valley who's love and appreciation of the great invention of the internet led him to follow the path of a full-stack software developer."
+            'This is a space to share my notes from the audio books I have listned to.'
     },
     plugins: [
         'gatsby-plugin-react-helmet',

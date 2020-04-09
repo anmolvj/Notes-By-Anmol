@@ -27,7 +27,6 @@ const TemplateWrapper = ({ children }) => {
                 <html lang="en" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
-
                 {/* <link
                     rel="apple-touch-icon"
                     sizes="180x180"
@@ -45,7 +44,6 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/favicon-16x16.png`}
           sizes="16x16"
         /> */}
-
                 {/* <link
                     rel="mask-icon"
                     href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
@@ -59,13 +57,20 @@ const TemplateWrapper = ({ children }) => {
                     href="https://fonts.googleapis.com/css?family=Nunito:700,700i&display=swap"
                     rel="stylesheet"
                 />
-
                 <link
                     href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
                     rel="stylesheet"
                 />
-                <meta name="theme-color" content="#fff" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Merienda&display=swap"
+                    rel="stylesheet"
+                />
 
+                <meta name="theme-color" content="#fff" />
                 <meta property="og:type" content="business.business" />
                 <meta property="og:title" content={title} />
                 <meta property="og:url" content="/" />

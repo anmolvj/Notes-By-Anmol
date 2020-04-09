@@ -1,16 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import github from '../img/github-icon.svg'
-import linkedin from '../img/social/linkedin.svg'
-
+import { AiOutlineLinkedin } from 'react-icons/ai'
 const colors = {
     ETON_BLUE: '#87CBAC'
 }
 
 const MyName = styled.h1`
-    font-family: 'Anton', sans-serif;
+    font-weight: bold;
     color: ${colors.ETON_BLUE};
+`
+const LinkedInIcon = styled(AiOutlineLinkedin)`
+    color: ${colors.ETON_BLUE};
+    height: 2rem;
+    width: 2rem;
 `
 
 const Navbar = class extends React.Component {
@@ -94,9 +97,7 @@ const Navbar = class extends React.Component {
                                 rel="noopener noreferrer"
                                 title="Linkedin"
                             >
-                                <span className="icon">
-                                    <img src={linkedin} alt="Linkedin" />
-                                </span>
+                                <LinkedInIcon />
                             </a>
                         </div>
                     </div>

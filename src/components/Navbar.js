@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { AiOutlineLinkedin } from 'react-icons/ai'
+import { AiOutlineLinkedin, AiFillHome } from 'react-icons/ai'
+
 const colors = {
     ETON_BLUE: '#87CBAC'
 }
@@ -10,10 +11,15 @@ const MyName = styled.h1`
     font-weight: bold;
     color: ${colors.ETON_BLUE};
 `
+const HomeIcon = styled(AiFillHome)`
+    color: ${colors.ETON_BLUE};
+    height: 1.5rem;
+    width: 1.5rem;
+`
 const LinkedInIcon = styled(AiOutlineLinkedin)`
     color: ${colors.ETON_BLUE};
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
 `
 
 const Navbar = class extends React.Component {
@@ -55,7 +61,7 @@ const Navbar = class extends React.Component {
                 <div className="container">
                     <div className="navbar-brand">
                         <Link to="/" className="navbar-item" title="Logo">
-                            <MyName>AV</MyName>
+                            <HomeIcon />
                         </Link>
                         {/* Hamburger menu */}
                         <div

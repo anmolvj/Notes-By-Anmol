@@ -32,7 +32,7 @@ const DescriptionText = styled(TypographyNunito)`
 const FeaturedTag = styled.div`
     position: absolute;
     top: 0;
-    background-color: yellow;
+    background-color: #f7b538;
     font-weight: bold;
     padding: 5px;
     font-size: 0.7rem;

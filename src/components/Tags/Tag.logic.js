@@ -7,7 +7,8 @@ import Avatar from '@material-ui/core/Avatar'
 
 const colors = {
     ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
+    CERULEAN_BLUE: '#3066BE',
+    TUSCAN: '#F7D9A0'
 }
 
 const StyledLink = styled(Link)`
@@ -16,7 +17,7 @@ const StyledLink = styled(Link)`
     }
 `
 const StyledChip = styled(Chip)`
-    background-color: #f0ddab;
+    background-color: ${colors.TUSCAN};
     margin-right: 10px;
     margin-bottom: 10px;
     font-weight: bold;

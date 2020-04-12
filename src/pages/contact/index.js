@@ -1,5 +1,9 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
+import Button from '@material-ui/core/Button'
+import styled from 'styled-components'
+import { MdSend } from 'react-icons/md'
+
 import Layout from '../../components/Layout'
 
 function encode(data) {
@@ -10,6 +14,25 @@ function encode(data) {
         .join('&')
 }
 
+const colors = {
+    ETON_BLUE: '#87CBAC'
+}
+
+const SendButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+`
+const SendButton = styled(Button)`
+    color: ${colors.ETON_BLUE};
+    font-size: 1.25rem;
+    padding: 0;
+    margin-top: 10px;
+    text-transform: none;
+    font-weight: bold;
+`
 export default class Index extends React.Component {
     constructor(props) {
         super(props)
@@ -112,14 +135,18 @@ export default class Index extends React.Component {
                                         />
                                     </div>
                                 </div>
-                                <div className="field">
-                                    <button
-                                        className="button is-link"
+                                {/* <div className="field"> */}
+                                <SendButtonContainer>
+                                    <SendButton
+                                        size="large"
                                         type="submit"
+                                        endIcon={<MdSend />}
                                     >
                                         Send
-                                    </button>
-                                </div>
+                                    </SendButton>
+                                </SendButtonContainer>
+
+                                {/* </div> */}
                             </form>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ const Image = styled(Img)`
         width: ${px2vw(768, 1024)};
     }
     @media (min-width: 1024px) {
-        max-width: 768px;
+        max-width: ${px2vw(750)};
     }
 `
 const PreviewCompatibleImage = ({ imageInfo }) => {

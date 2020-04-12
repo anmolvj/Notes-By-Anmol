@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import { Parser } from 'html-to-react'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/BlogRoll/Post/PreviewCompatibleImage'
@@ -15,26 +16,32 @@ const Container = styled.div`
     }
 `
 const ImageContainer = styled.div``
+
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 `
 const Greeting = styled.div`
+    margin-top: 20px;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Nunito';
     padding: 10px;
+    @media (min-width: 1024px) {
+        font-size: 3rem;
+    }
 `
 const ContentContainer = styled.div`
     padding: 10px;
-    margin: auto;
+    margin: 30px auto;
+    font-size: 1rem;
     @media (min-width: 768px) {
         width: ${px2vw(768, 1024)};
     }
     @media (min-width: 1024px) {
         width: 100%;
+        font-size: 1.25rem;
     }
 `
 export const MyStoryPageTemplate = ({
@@ -44,7 +51,8 @@ export const MyStoryPageTemplate = ({
     contentComponent
 }) => {
     const PageContent = contentComponent || Content
-    console.log('CONTANT - ', content)
+    const htmlToReactParser = new Parser()
+
     return (
         <Container>
             <ImageContainer>
@@ -53,7 +61,8 @@ export const MyStoryPageTemplate = ({
             <TextContainer>
                 <Greeting>{greeting}</Greeting>
                 <ContentContainer>
-                    <PageContent className="content" content={content} />
+                    {/* <PageContent content={content} /> */}
+                    {htmlToReactParser.parse(content)}
                 </ContentContainer>
             </TextContainer>
         </Container>

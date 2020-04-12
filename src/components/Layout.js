@@ -31,6 +31,12 @@ const TemplateWrapper = ({ children }) => {
                 <meta property="og:type" content="business.business" />
                 <meta property="og:title" content={title} />
                 <meta property="og:url" content="/" />
+
+                {/* KAUSHAN SCRIPT is not getting correct font version loaded using our font loading plugin */}
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+                    rel="stylesheet"
+                />
             </Helmet>
             <MainContainer>
                 <Navbar />

@@ -8,19 +8,14 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    {
-                        family: `Nunito`
-                    },
-                    {
-                        family: `Merienda`
-                    },
-                    {
-                        family: `Kaushan`
-                    }
-                ]
+                    `Nunito\:400,400i,700, 700i`,
+                    `Merienda\:400,400i,700, 700i`
+                    // `Kaushan+Script\:400` --> this font isn't getting the correct version through this plugin
+                ],
+                display: 'swap'
             }
         },
         {

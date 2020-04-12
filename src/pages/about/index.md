@@ -2,7 +2,7 @@
 templateKey: about-page
 title: "Hi there. My name is Anmol. Welcome to my home on the internet \U0001F913"
 ---
-![Anmol Vijayvargiya - Headshot Image](/img/ME_40.jpg "Anmol Vijayvargiya")
+![Anmol Vijayvargiya - Headshot Image](/img/DSCF8401.jpeg "Anmol Vijayvargiya")
 
 ## What I am working on
 

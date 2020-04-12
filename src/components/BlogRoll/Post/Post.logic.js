@@ -20,7 +20,6 @@ const PostTitle = styled(TypographyNunito)`
     color: ${colors.ETON_BLUE};
     margin-top: 10px;
     font-weight: bold;
-    /* font-family: 'Kaushan Script', cursive; */
     font-family: 'Merienda', cursive;
 `
 const DescriptionText = styled(TypographyNunito)`

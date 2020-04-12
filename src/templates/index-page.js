@@ -26,7 +26,6 @@ const ReadMoreButton = styled(Button)`
 const NameContainer = styled.div`
     display: flex;
     flex-direction: column;
-    /* font-family: 'Anton', sans-serif; */
     font-family: 'Kaushan Script', cursive;
     font-size: 4rem;
     justify-content: center;

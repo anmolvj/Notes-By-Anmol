@@ -42,8 +42,6 @@ const TemplateWrapper = ({ children }) => {
                 <Navbar />
                 <DefaultFont>{children}</DefaultFont>
             </MainContainer>
-
-            <Footer />
         </BodyContainer>
     )
 }

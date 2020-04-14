@@ -4,16 +4,16 @@ title: ATOMIC HABITS
 author: James Clear
 date: 2020-02-23T23:43:01.307Z
 description: A practical guide to finding queues in existing habits to insert
-    new habits so they stick.
+  new habits so they stick.
 featuredpost: false
 featuredimage: /img/atomic-habits-book-cover.jpg
 tags:
-    - productivity
-    - habit programming
-    - psychology
+  - productivity
+  - habit programming
+  - psychology
 ---
 
-## KEY TAKEAWAYS FROM THE BOOK
+## KEY TAKEAWAYS 
 
 ### RULE OF THUMB 👍
 

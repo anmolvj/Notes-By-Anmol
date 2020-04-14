@@ -4,17 +4,17 @@ title: THE 4 HOUR WORKWEEK
 author: Timothy Ferriss
 date: 2020-03-01T01:57:42.682Z
 description: A step-by-step blueprint to free yourself from the shackles of a
-    corporate job, create a business to fund the lifestyle of your dreams, and
-    live life like a millionaire, without actually having to be one.
+  corporate job, create a business to fund the lifestyle of your dreams, and
+  live life like a millionaire, without actually having to be one.
 featuredpost: false
 featuredimage: /img/the-4-hour-work-week-book-cover.jpg
 tags:
-    - productivity
-    - career
-    - travel
+  - productivity
+  - career
+  - travel
 ---
 
-## Key takeaways from the book
+## KEY TAKEAWAYS 
 
 **_QUOTES ❝_**
 

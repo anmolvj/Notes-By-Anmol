@@ -13,7 +13,7 @@ tags:
   - Entrepreneurship
   - leadership
 ---
-### Key takeaways
+## KEY TAKEAWAYS 
 
 * Don't punish everyone for one person's mistake. Don’t impose rules for on your customers due to one bad experience with another one.
 * Proudly exclude people, proudly say what you are not. This will enable you to win the hearts of the people you want.

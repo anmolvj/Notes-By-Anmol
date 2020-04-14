@@ -7,13 +7,13 @@ description: A doorway to a healthy and less anxious life using the practice of 
 featuredpost: false
 featuredimage: /img/stillness-is-the-key-book-cover.jpg
 tags:
-    - philosophy
-    - stoicism
-    - productivity
-    - psychology
+  - philosophy
+  - stoicism
+  - productivity
+  - psychology
 ---
 
-## KEY TAKEAWAYS FROM THE BOOK
+## KEY TAKEAWAYS 
 
 **QUOTES** ❝
 

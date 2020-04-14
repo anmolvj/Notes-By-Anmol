@@ -2,19 +2,18 @@
 templateKey: blog-post
 title: PRINCIPLES
 date: 2020-03-01T02:11:37.738Z
-description: >-
-  Ray Dalio, one of the world's most successful investors and entrepreneurs,
-  shares the unconventional principles that he's developed, refined, and used
-  over the past forty years to create unique results in both life and
-  business—and which any person or organization can adopt to help achieve their
-  goals.
+description: Ray Dalio, one of the world's most successful investors and
+  entrepreneurs, shares the unconventional principles that he's developed,
+  refined, and used over the past forty years to create unique results in both
+  life and business—and which any person or organization can adopt to help
+  achieve their goals.
 featuredpost: true
-featuredimage: /img/principles-book -cover.jpg
+featuredimage: /img/principles-book-cover.jpg
 tags:
   - book
   - productivity
 ---
-![Principles - Book Cover](/img/principles-book -cover.jpg "Principles")
+## KEY TAKEAWAYS
 
 \- People who have shared values and principles get along. People who don't, will suffer constant misunderstandings and conflicts.\
 - If you work hard and work creativity you can have just about anything you want but not everything you want.\

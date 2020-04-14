@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Tags from '../components/Tags'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
     content,
@@ -13,7 +14,8 @@ export const BlogPostTemplate = ({
     tags,
     title,
     author,
-    helmet
+    helmet,
+    featuredimage
 }) => {
     const PostContent = contentComponent || Content
 
@@ -28,6 +30,7 @@ export const BlogPostTemplate = ({
                             {author && <i className="subtitle">by {author}</i>}
                         </h1>
                         <p>{description}</p>
+                        <PreviewCompatibleImage imageInfo={featuredimage} />
                         <PostContent content={content} />
                         {tags && tags.length ? (
                             <div style={{ marginTop: `4rem` }}>
@@ -48,7 +51,9 @@ BlogPostTemplate.propTypes = {
     description: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
-    helmet: PropTypes.object
+    helmet: PropTypes.object,
+    featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+        .isRequired
 }
 
 const BlogPost = ({ data }) => {
@@ -72,6 +77,7 @@ const BlogPost = ({ data }) => {
                 tags={post.frontmatter.tags}
                 title={post.frontmatter.title}
                 author={post.frontmatter.author}
+                featuredimage={post.frontmatter.featuredimage}
             />
         </Layout>
     )
@@ -96,6 +102,13 @@ export const pageQuery = graphql`
                 author
                 description
                 tags
+                featuredimage {
+                    childImageSharp {
+                        fluid(maxWidth: 120, quality: 100) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
         }
     }

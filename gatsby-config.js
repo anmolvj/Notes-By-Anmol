@@ -25,6 +25,16 @@ module.exports = {
                 theme_color: `#a2466c`,
                 display: `standalone`,
                 icon: `${__dirname}/static/img/DSCF8401.jpeg`,
+                cache_busting_mode: 'none',
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-offline',
+            options: {
+                workboxConfig: {
+                    globPatterns: ['**/*'],
+                },
+                debug: true,
             },
         },
         'gatsby-plugin-sass',

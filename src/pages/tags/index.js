@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Tag from '../../components/Tags/Tag.logic'
@@ -8,9 +8,9 @@ const TagsPage = ({
     data: {
         allMarkdownRemark: { group },
         site: {
-            siteMetadata: { title }
-        }
-    }
+            siteMetadata: { title },
+        },
+    },
 }) => (
     <Layout>
         <section className="section">
@@ -23,7 +23,7 @@ const TagsPage = ({
                     >
                         <h1 className="title is-size-2 is-bold-light">Tags</h1>
                         <ul className="taglist">
-                            {group.map(tag => (
+                            {group.map((tag) => (
                                 <Tag
                                     tag={tag.fieldValue}
                                     size="medium"

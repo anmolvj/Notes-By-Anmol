@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Button from '@material-ui/core/Button'
@@ -9,7 +9,7 @@ import ExpansionPanel from '../components/ExpansionPanel'
 
 const colors = {
     ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
+    CERULEAN_BLUE: '#3066BE',
 }
 
 const StyledBrowseAllTagsButton = styled(Button)`
@@ -19,7 +19,7 @@ const StyledBrowseAllTagsButton = styled(Button)`
 
 const TagRoute = ({ data, pageContext }) => {
     const posts = data.allMarkdownRemark.edges
-    const postLinks = posts.map(post => (
+    const postLinks = posts.map((post) => (
         <ExpansionPanel
             url={post.node.fields.slug}
             title={post.node.frontmatter.title}

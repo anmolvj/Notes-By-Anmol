@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Paper from '@material-ui/core/Paper'
@@ -49,7 +49,7 @@ export const BlogPostTemplate = ({
     title,
     author,
     helmet,
-    featuredimage
+    featuredimage,
 }) => {
     const PostContent = contentComponent || Content
 
@@ -95,7 +95,7 @@ BlogPostTemplate.propTypes = {
     author: PropTypes.string,
     helmet: PropTypes.object,
     featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-        .isRequired
+        .isRequired,
 }
 
 const BlogPost = ({ data }) => {
@@ -127,8 +127,8 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
     data: PropTypes.shape({
-        markdownRemark: PropTypes.object
-    })
+        markdownRemark: PropTypes.object,
+    }),
 }
 
 export default BlogPost

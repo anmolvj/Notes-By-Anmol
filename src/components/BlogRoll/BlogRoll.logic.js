@@ -1,21 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
-import { BlogRollContainer } from './BlogRoll.styled'
+import Grid from '@material-ui/core/Grid'
 import Post from './Post'
 
 export const BlogRoll = (props) => {
     const { data, showAll } = props
     const { edges: posts } = data.allMarkdownRemark
     return (
-        <BlogRollContainer>
+        <Grid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={3}
+        >
             {posts &&
                 posts.map(({ node: post }, idx) => {
                     if (showAll || idx < 4) {
-                        return <Post post={post} />
+                        return (
+                            <Grid item xs={12} sm={6}>
+                                <Post post={post} />
+                            </Grid>
+                        )
                     }
                 })}
-        </BlogRollContainer>
+        </Grid>
     )
 }
 

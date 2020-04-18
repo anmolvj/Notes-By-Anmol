@@ -6,6 +6,15 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-react-helmet',
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none',
+                head: true,
+                anonymize: true,
+                exclude: ['/preview/**'],
+            },
+        },
         'gatsby-plugin-sass',
         {
             resolve: `gatsby-plugin-google-fonts`,

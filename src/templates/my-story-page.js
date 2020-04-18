@@ -48,7 +48,7 @@ export const MyStoryPageTemplate = ({
     greeting,
     content,
     headshotImg,
-    contentComponent
+    contentComponent,
 }) => {
     const PageContent = contentComponent || Content
     const htmlToReactParser = new Parser()
@@ -72,12 +72,11 @@ export const MyStoryPageTemplate = ({
 MyStoryPageTemplate.propTypes = {
     greeting: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
-    headshotImg: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    headshotImg: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const MyStoryPage = ({ data }) => {
     const { markdownRemark: frontmatter } = data
-    console.log('frontmatter - ', frontmatter)
     return (
         <Layout>
             <MyStoryPageTemplate
@@ -91,7 +90,7 @@ const MyStoryPage = ({ data }) => {
 }
 
 MyStoryPage.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
 }
 
 export default MyStoryPage

@@ -15,6 +15,18 @@ module.exports = {
                 exclude: ['/preview/**'],
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Notes By Anmol`,
+                short_name: `NotesByAnmol`,
+                start_url: `/`,
+                background_color: `#f7f0eb`,
+                theme_color: `#a2466c`,
+                display: `standalone`,
+                icon: `${__dirname}/static/img/DSCF8401.jpeg`,
+            },
+        },
         'gatsby-plugin-sass',
         {
             resolve: `gatsby-plugin-google-fonts`,

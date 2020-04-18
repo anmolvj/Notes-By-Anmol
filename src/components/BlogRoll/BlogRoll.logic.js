@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { BlogRollContainer } from './BlogRoll.styled'
 import Post from './Post'
 
-export const BlogRoll = props => {
+export const BlogRoll = (props) => {
     const { data, showAll } = props
     const { edges: posts } = data.allMarkdownRemark
     return (
@@ -22,9 +22,9 @@ export const BlogRoll = props => {
 BlogRoll.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
-            edges: PropTypes.array
-        })
-    })
+            edges: PropTypes.array,
+        }),
+    }),
 }
 
 export default ({ showAll }) => (
@@ -43,6 +43,9 @@ export default ({ showAll }) => (
                             id
                             fields {
                                 slug
+                                readingTime {
+                                    text
+                                }
                             }
                             frontmatter {
                                 title

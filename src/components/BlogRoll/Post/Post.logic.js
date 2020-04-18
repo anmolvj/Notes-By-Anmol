@@ -8,7 +8,7 @@ import Tags from '../../Tags'
 
 const colors = {
     ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
+    CERULEAN_BLUE: '#3066BE',
 }
 
 const TypographyNunito = styled(Typography)`
@@ -36,6 +36,7 @@ const FeaturedTag = styled.div`
     padding: 5px;
     font-size: 0.7rem;
 `
+
 const Post = ({ post }) => (
     <StyledCard
         elevation={3}
@@ -44,13 +45,21 @@ const Post = ({ post }) => (
         {post.frontmatter.featuredpost && <FeaturedTag>FEATURED</FeaturedTag>}
         <CardContent>
             <Link to={post.fields.slug}>
-                <PostTitle noWrap gutterBottom variant="h5" component="h2">
+                <PostTitle noWrap gutterBottom variant="h6">
                     {post.frontmatter.title}
                 </PostTitle>
             </Link>
-            <TypographyNunito noWrap gutterBottom variant="subtitle1">
+            {/* <TypographyNunito noWrap variant="subtitle1">
                 {post.frontmatter.date}
+            </TypographyNunito> */}
+            <TypographyNunito noWrap gutterBottom variant="overline">
+                {post.fields.readingTime.text}
             </TypographyNunito>
+            <TypographyNunito
+                noWrap
+                gutterBottom
+                variant="subtitle1"
+            ></TypographyNunito>
             <DescriptionText
                 variant="body2"
                 color="textSecondary"

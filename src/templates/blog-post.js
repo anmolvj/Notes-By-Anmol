@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Tags from '../components/Tags'
@@ -31,7 +33,6 @@ const TitleHeader = styled.div`
     font-size: 2rem;
     font-weight: bold;
 `
-const TitleSubHeader = styled.div``
 
 const TextContainer = styled.div`
     padding: 10px;
@@ -40,6 +41,9 @@ const TextContainer = styled.div`
 const Description = styled.div`
     padding-bottom: 20px;
     font-weight: bold;
+`
+const TypographyNunito = styled(Typography)`
+    font-family: 'Nunito';
 `
 export const BlogPostTemplate = ({
     content,
@@ -50,6 +54,8 @@ export const BlogPostTemplate = ({
     author,
     helmet,
     featuredimage,
+    readingTime,
+    date,
 }) => {
     const PostContent = contentComponent || Content
 
@@ -62,8 +68,22 @@ export const BlogPostTemplate = ({
                         <TitleContainer>
                             <TitleHeader>{title}</TitleHeader>
                             {author && (
-                                <TitleSubHeader>by {author}</TitleSubHeader>
+                                <TypographyNunito
+                                    variant="subtitle-1"
+                                    display="block"
+                                >
+                                    by {author}
+                                </TypographyNunito>
                             )}
+
+                            <TypographyNunito
+                                noWrap
+                                variant="overline"
+                                color="textSecondary"
+                                display="block"
+                            >
+                                {readingTime} | {date}
+                            </TypographyNunito>
                         </TitleContainer>
 
                         <BookCoverContainer elevation={15}>
@@ -96,11 +116,11 @@ BlogPostTemplate.propTypes = {
     helmet: PropTypes.object,
     featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
         .isRequired,
+    readingTime: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {
     const { markdownRemark: post } = data
-
     return (
         <Layout>
             <BlogPostTemplate
@@ -120,6 +140,8 @@ const BlogPost = ({ data }) => {
                 title={post.frontmatter.title}
                 author={post.frontmatter.author}
                 featuredimage={post.frontmatter.featuredimage}
+                readingTime={post.fields.readingTime.text}
+                date={post.frontmatter.date}
             />
         </Layout>
     )
@@ -150,6 +172,12 @@ export const pageQuery = graphql`
                             ...GatsbyImageSharpFluid
                         }
                     }
+                }
+            }
+            fields {
+                slug
+                readingTime {
+                    text
                 }
             }
         }

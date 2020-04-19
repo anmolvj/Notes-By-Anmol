@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
 import Post from './Post'
+
+const BlogRollGrid = styled(Grid)``
 
 export const BlogRoll = (props) => {
     const { data, showAll } = props
     const { edges: posts } = data.allMarkdownRemark
     return (
-        <Grid
+        <BlogRollGrid
             container
             direction="row"
             justify="space-around"
@@ -25,7 +28,8 @@ export const BlogRoll = (props) => {
                         )
                     }
                 })}
-        </Grid>
+            {posts.length % 2 && <Grid item xs={12} sm={6} />}
+        </BlogRollGrid>
     )
 }
 

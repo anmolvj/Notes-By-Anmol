@@ -24,7 +24,6 @@ const PostTitle = styled(TypographyNunito)`
     margin-top: 10px;
     margin-bottom: 0;
     font-weight: bold;
-    /* font-family: 'Merienda', cursive; */
 `
 const DescriptionText = styled(TypographyNunito)`
     height: 3rem;

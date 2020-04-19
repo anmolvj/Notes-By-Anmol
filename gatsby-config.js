@@ -47,7 +47,6 @@ module.exports = {
             options: {
                 fonts: [
                     `Nunito\:400,400i,700, 700i`,
-                    `Merienda\:400,400i,700, 700i`,
                     // `Kaushan+Script\:400` --> this font isn't getting the correct version through this plugin
                 ],
                 display: 'swap',

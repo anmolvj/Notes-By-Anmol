@@ -4,14 +4,13 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { GiSpellBook } from 'react-icons/gi'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Button from '@material-ui/core/Button'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import { AiOutlineRead } from 'react-icons/ai'
 
 const colors = {
-    ETON_BLUE: '#87CBAC'
+    ETON_BLUE: '#87CBAC',
 }
 
 const MainContainer = styled.div``
@@ -80,7 +79,7 @@ export const IndexPageTemplate = ({
     subheading,
     mainpitch,
     description,
-    intro
+    intro,
 }) => (
     <MainContainer>
         <BannerContainer>
@@ -120,8 +119,8 @@ IndexPageTemplate.propTypes = {
     mainpitch: PropTypes.object,
     description: PropTypes.string,
     intro: PropTypes.shape({
-        blurbs: PropTypes.array
-    })
+        blurbs: PropTypes.array,
+    }),
 }
 
 const IndexPage = ({ data }) => {
@@ -146,9 +145,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.shape({
-            frontmatter: PropTypes.object
-        })
-    })
+            frontmatter: PropTypes.object,
+        }),
+    }),
 }
 
 export default IndexPage
@@ -161,7 +160,7 @@ export const pageQuery = graphql`
                 lname
                 image {
                     childImageSharp {
-                        fluid(maxWidth: 2048, quality: 100) {
+                        fluid(maxWidth: 2048) {
                             ...GatsbyImageSharpFluid
                         }
                     }
@@ -177,7 +176,7 @@ export const pageQuery = graphql`
                     blurbs {
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 240, quality: 64) {
+                                fluid(maxWidth: 240) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }

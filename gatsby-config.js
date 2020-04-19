@@ -28,7 +28,12 @@ module.exports = {
                 icon: `${__dirname}/static/img/DSCF8401.jpeg`,
             },
         },
-        'gatsby-plugin-offline',
+        {
+            resolve: `gatsby-plugin-offline`,
+            options: {
+                precachePages: [`/my-story/`, `/blog/*`],
+            },
+        },
         'gatsby-plugin-sitemap',
         {
             resolve: 'gatsby-plugin-robots-txt',

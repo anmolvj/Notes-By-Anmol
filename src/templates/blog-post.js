@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Tags from '../components/Tags'
+import Tag from '../components/Tags/Tag.logic'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const BookCoverContainer = styled(Paper)`
@@ -96,13 +97,26 @@ export const BlogPostTemplate = ({
                             {tags && tags.length ? (
                                 <div style={{ marginTop: `4rem` }}>
                                     <h4>Tags</h4>
-                                    {
-                                        <Tags
-                                            tags={tags}
-                                            size="medium"
-                                            tagspage
-                                        />
-                                    }
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="center"
+                                        spacing={2}
+                                    >
+                                        {console.log(tags)}
+                                        {tags.map((tag) => (
+                                            <Grid item>
+                                                <Tag
+                                                    tagspage
+                                                    tag={tag}
+                                                    size="medium"
+                                                    uppercase
+                                                />
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                    {/* <Tags tags={tags} size="medium" tagspage /> */}
                                 </div>
                             ) : null}
                         </TextContainer>

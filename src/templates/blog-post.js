@@ -104,7 +104,6 @@ export const BlogPostTemplate = ({
                                         alignItems="center"
                                         spacing={2}
                                     >
-                                        {console.log(tags)}
                                         {tags.map((tag) => (
                                             <Grid item>
                                                 <Tag

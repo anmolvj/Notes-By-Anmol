@@ -130,58 +130,8 @@ const Post = ({ post }) => (
                     </TagGrid>
                 )}
             </Grid>
-
-            {/* <TagGrid item xs={11}>
-                {post.frontmatter.tags && (
-                    <TagGrid
-                        container
-                        direction="row"
-                        justify="flex-start"
-                        alignItems="center"
-                        spacing={1}
-                    >
-                        {post.frontmatter.tags.map((t) => (
-                            <Grid item>
-                                <Tag tag={t} />
-                            </Grid>
-                        ))}
-                    </TagGrid>
-                )}
-            </Grid> */}
         </StyledGridContainer>
     </NoteCard>
 )
-
-// const Post = ({ post }) => (
-//     <StyledCard
-//         elevation={3}
-//         bgColor={post.frontmatter.featuredpost && '#ffede6'}
-//     >
-//         {post.frontmatter.featuredpost && <FeaturedTag>FEATURED</FeaturedTag>}
-//         <CardContent>
-//             <Link to={post.fields.slug}>
-//                 <PostTitle noWrap gutterBottom variant="h6">
-//                     post.frontmatter.title
-//                 </PostTitle>
-//             </Link>
-//             <TypographyNunito noWrap gutterBottom variant="overline">
-//                 post.fields.readingTime.text
-//             </TypographyNunito>
-//             <TypographyNunito
-//                 noWrap
-//                 gutterBottom
-//                 variant="subtitle1"
-//             ></TypographyNunito>
-//             <DescriptionText
-//                 variant="body2"
-//                 color="textSecondary"
-//                 component="p"
-//             >
-//                 {post.frontmatter.description}
-//             </DescriptionText>
-//         </CardContent>
-//         {post.frontmatter.tags && <Tags tags={post.frontmatter.tags} />}
-//     </NoteCard>
-// )
 
 export default Post

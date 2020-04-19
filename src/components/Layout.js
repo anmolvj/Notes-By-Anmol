@@ -23,7 +23,15 @@ const TemplateWrapper = ({ children }) => {
     const { title, description } = useSiteMetadata()
     return (
         <BodyContainer>
-            <Helmet>
+            <Helmet
+                meta={[
+                    {
+                        name: 'keywords',
+                        content:
+                            'anmol, vijayvargiya, notes, books, pwa, blog, summary',
+                    },
+                ]}
+            >
                 <html lang="en" />
                 <title>{title}</title>
                 <meta name="description" content={description} />

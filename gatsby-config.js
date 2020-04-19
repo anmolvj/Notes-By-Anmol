@@ -1,5 +1,6 @@
 module.exports = {
     siteMetadata: {
+        siteUrl: 'https://www.notesbyanmol.com',
         title: 'Notes by Anmol',
         description:
             'This is a space to share my notes from the audio books I have listned to.',
@@ -21,20 +22,18 @@ module.exports = {
                 name: `Notes By Anmol`,
                 short_name: `NotesByAnmol`,
                 start_url: `/`,
-                background_color: `#f7f0eb`,
-                theme_color: `#a2466c`,
+                background_color: `#87CBAC`,
+                theme_color: `#87CBAC`,
                 display: `standalone`,
                 icon: `${__dirname}/static/img/DSCF8401.jpeg`,
-                cache_busting_mode: 'none',
             },
         },
+        'gatsby-plugin-offline',
+        'gatsby-plugin-sitemap',
         {
-            resolve: 'gatsby-plugin-offline',
+            resolve: 'gatsby-plugin-robots-txt',
             options: {
-                workboxConfig: {
-                    globPatterns: ['**/*'],
-                },
-                debug: true,
+                policy: [{ userAgent: '*', allow: '/' }],
             },
         },
         'gatsby-plugin-sass',

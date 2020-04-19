@@ -1,21 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
-import { BlogRollContainer } from './BlogRoll.styled'
+import Grid from '@material-ui/core/Grid'
 import Post from './Post'
+
+const BlogRollGrid = styled(Grid)``
 
 export const BlogRoll = (props) => {
     const { data, showAll } = props
     const { edges: posts } = data.allMarkdownRemark
     return (
-        <BlogRollContainer>
+        <BlogRollGrid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={5}
+        >
             {posts &&
                 posts.map(({ node: post }, idx) => {
                     if (showAll || idx < 4) {
-                        return <Post post={post} />
+                        return (
+                            <Grid item xs={12} sm={6}>
+                                <Post post={post} />
+                            </Grid>
+                        )
                     }
                 })}
-        </BlogRollContainer>
+            {posts.length % 2 && <Grid item xs={12} sm={6} />}
+        </BlogRollGrid>
     )
 }
 
@@ -52,13 +66,6 @@ export default ({ showAll }) => (
                                 templateKey
                                 date(formatString: "MMMM DD, YYYY")
                                 featuredpost
-                                featuredimage {
-                                    childImageSharp {
-                                        fluid(maxWidth: 120, quality: 100) {
-                                            ...GatsbyImageSharpFluid
-                                        }
-                                    }
-                                }
                                 description
                                 tags
                             }

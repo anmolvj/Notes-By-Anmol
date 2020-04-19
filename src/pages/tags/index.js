@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Tag from '../../components/Tags/Tag.logic'
-
+import Grid from '@material-ui/core/Grid'
 const TagsPage = ({
     data: {
         allMarkdownRemark: { group },
@@ -22,16 +22,25 @@ const TagsPage = ({
                         style={{ marginBottom: '6rem' }}
                     >
                         <h1 className="title is-size-2 is-bold-light">Tags</h1>
-                        <ul className="taglist">
+                        <Grid
+                            container
+                            direction="row"
+                            justify="flex-start"
+                            alignItems="center"
+                            spacing={3}
+                        >
                             {group.map((tag) => (
-                                <Tag
-                                    tag={tag.fieldValue}
-                                    size="medium"
-                                    totalCount={tag.totalCount}
-                                    uppercase
-                                />
+                                <Grid item>
+                                    <Tag
+                                        tagspage
+                                        tag={tag.fieldValue}
+                                        size="medium"
+                                        totalCount={tag.totalCount}
+                                        uppercase
+                                    />
+                                </Grid>
                             ))}
-                        </ul>
+                        </Grid>
                     </div>
                 </div>
             </div>

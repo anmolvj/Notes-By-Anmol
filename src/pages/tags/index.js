@@ -25,6 +25,7 @@ const TagsPage = ({
                         <ul className="taglist">
                             {group.map((tag) => (
                                 <Tag
+                                    tagspage
                                     tag={tag.fieldValue}
                                     size="medium"
                                     totalCount={tag.totalCount}

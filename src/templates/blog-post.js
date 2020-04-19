@@ -96,7 +96,13 @@ export const BlogPostTemplate = ({
                             {tags && tags.length ? (
                                 <div style={{ marginTop: `4rem` }}>
                                     <h4>Tags</h4>
-                                    {<Tags tags={tags} size="medium" />}
+                                    {
+                                        <Tags
+                                            tags={tags}
+                                            size="medium"
+                                            tagspage
+                                        />
+                                    }
                                 </div>
                             ) : null}
                         </TextContainer>

@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Tags from '../../Tags'
+import Tag from '../../Tags/Tag.logic'
 
 const colors = {
     ETON_BLUE: '#87CBAC',
@@ -26,8 +27,8 @@ const PostTitle = styled(TypographyNunito)`
     font-family: 'Merienda', cursive;
 `
 const DescriptionText = styled(TypographyNunito)`
-    height: 3em;
-    line-height: 1em;
+    height: 3rem;
+    line-height: 1rem;
     overflow: hidden;
 `
 
@@ -68,10 +69,19 @@ const NoteReadTime = ({ readTime }) => (
 )
 
 const NoteDescription = ({ desc }) => (
-    <DescriptionText variant="subtitle2" color="textSecondary" component="p">
+    <DescriptionText
+        gutterBottom
+        variant="subtitle2"
+        color="textSecondary"
+        component="p"
+    >
         {desc}
     </DescriptionText>
 )
+
+const TagGrid = styled(Grid)`
+    padding-top: 0.5rem;
+`
 
 const Post = ({ post }) => (
     <NoteCard>
@@ -94,9 +104,41 @@ const Post = ({ post }) => (
             <Grid item xs={11}>
                 <NoteDescription desc={post.frontmatter.description} />
             </Grid>
-            <Grid item xs={10}>
-                {/* Tags */}
+            <Grid item xs={11}>
+                {post.frontmatter.tags && (
+                    <TagGrid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="center"
+                        spacing={1}
+                    >
+                        {post.frontmatter.tags.map((t) => (
+                            <Grid item>
+                                <Tag tag={t} />
+                            </Grid>
+                        ))}
+                    </TagGrid>
+                )}
             </Grid>
+
+            {/* <TagGrid item xs={11}>
+                {post.frontmatter.tags && (
+                    <TagGrid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="center"
+                        spacing={1}
+                    >
+                        {post.frontmatter.tags.map((t) => (
+                            <Grid item>
+                                <Tag tag={t} />
+                            </Grid>
+                        ))}
+                    </TagGrid>
+                )}
+            </Grid> */}
         </StyledGridContainer>
     </NoteCard>
 )

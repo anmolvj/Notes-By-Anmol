@@ -13,7 +13,7 @@ export const BlogRoll = (props) => {
             direction="row"
             justify="space-around"
             alignItems="center"
-            spacing={3}
+            spacing={5}
         >
             {posts &&
                 posts.map(({ node: post }, idx) => {

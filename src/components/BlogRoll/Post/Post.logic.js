@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Tags from '../../Tags'
 import Tag from '../../Tags/Tag.logic'
-
+import { IoMdTime } from 'react-icons/io'
 const colors = {
     ETON_BLUE: '#87CBAC',
     CERULEAN_BLUE: '#3066BE',
@@ -24,7 +24,7 @@ const PostTitle = styled(TypographyNunito)`
     margin-top: 10px;
     margin-bottom: 0;
     font-weight: bold;
-    font-family: 'Merienda', cursive;
+    /* font-family: 'Merienda', cursive; */
 `
 const DescriptionText = styled(TypographyNunito)`
     height: 3rem;
@@ -58,13 +58,22 @@ const NoteCard = styled(Card)`
 
 const NoteCardTitle = ({ link, title }) => (
     <Link to={link}>
-        <PostTitle noWrap>{title}</PostTitle>
+        <PostTitle noWrap variant="h6">
+            {title}
+        </PostTitle>
     </Link>
 )
 
+const ClockIcon = styled(IoMdTime)`
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: 0.25rem;
+`
+
 const NoteReadTime = ({ readTime }) => (
     <TypographyNunito noWrap gutterBottom variant="overline">
-        {readTime}
+        <ClockIcon /> {readTime}
     </TypographyNunito>
 )
 

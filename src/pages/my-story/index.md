@@ -5,7 +5,7 @@ greeting: " 👐"
 ---
 👋Hey, my name is Anmol Vijayvargiya. Welcome to my notebook on the open internet.
 
-Some Facts about me
+Few facts about me
 
 * I currently work for a Software company to build tools that enhance the Experience of other software developers. You can say that I am an ***Experience Developer.***
 * I completed my graduate studies in Computer Science from Santa Clara University and graduated  in 2018. 

@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: PRINCIPLES
+author: Ray Dalio
 date: 2020-03-01T02:11:37.738Z
 description: Ray Dalio, one of the world's most successful investors and
   entrepreneurs, shares the unconventional principles that he's developed,

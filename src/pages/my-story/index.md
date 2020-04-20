@@ -1,10 +1,12 @@
 ---
 templateKey: my-story-page
 headshotImg: /img/DSCF8401.jpeg
-greeting: 'Hey, Anmol here 👋'
+greeting: " 👐"
 ---
+👋Hey, my name is Anmol Vijayvargiya. Welcome to my notebook on the open internet.
 
-👨‍💻 I am a Software Engineer in California, US. I studies Computer Science & Engineering at Santa Clara University and graduated in 2018.
-✍️On this website I post tips and ideas I learn about from books and other resources I read and have found helpful over the years.
-🤓 I learned to code while I was in college studying Electronics and Telecommunication engineering which later led me to pursue graduate studies in computer science eventually bringing me to United States.
-🎞 Among my extra curricular goals for 2020 are completing 50 hours of surfing🏄‍♂️, listening to 26 audio books 📚and participate in my first powerlifting competition 🏋️‍♂️.
+Some Facts about me
+
+* I currently work for a Software company to build tools that enhance the Experience of other software developers. You can say that I am an ***Experience Developer.***
+* I completed my graduate studies in Computer Science from Santa Clara University and graduated  in 2018. 
+* My yearly goals include reading 25 books, compete in my first professional powerlifting competition and bag 50+ hours of surf practice.

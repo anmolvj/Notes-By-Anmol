@@ -4,18 +4,18 @@ title: PRINCIPLES
 author: Ray Dalio
 date: 2020-03-01T02:11:37.738Z
 description: Ray Dalio, one of the world's most successful investors and
-    entrepreneurs, shares the unconventional principles that he's developed,
-    refined, and used over the past forty years to create unique results in both
-    life and business—and which any person or organization can adopt to help
-    achieve their goals.
+  entrepreneurs, shares the unconventional principles that he's developed,
+  refined, and used over the past forty years to create unique results in both
+  life and business—and which any person or organization can adopt to help
+  achieve their goals.
 featuredpost: true
 featuredimage: /img/principles-book-cover.jpg
 tags:
-    - decision making
-    - productivity
-    - business
-    - economics
-    - leadership
+  - decision making
+  - productivity
+  - business
+  - economics
+  - leadership
 ---
 
 ## KEY TAKEAWAYS

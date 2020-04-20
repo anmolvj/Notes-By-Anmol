@@ -43,6 +43,21 @@ module.exports = {
         },
         'gatsby-plugin-sass',
         {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                showSpinner: false,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-page-progress',
+            options: {
+                prependToBody: true,
+                includePaths: [{ regex: '^/blog/' }],
+                height: 2,
+                color: `#f50057`,
+            },
+        },
+        {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [

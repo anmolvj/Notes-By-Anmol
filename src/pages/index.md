@@ -4,7 +4,7 @@ fname: Notes by
 lname: Anmol
 image: /img/landing-page-banner.jpg
 heading: Great coffee with a conscience
-subheading: 'This is a space to share my notes from the audio books I have listned to.'
+subheading: 'This is a space where I share notes from the audio books I listen to.',
 mainpitch:
     title: 'Hi internet surfers,'
     description: >

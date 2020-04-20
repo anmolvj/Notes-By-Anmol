@@ -3,7 +3,7 @@ module.exports = {
         siteUrl: 'https://www.notesbyanmol.com',
         title: 'Notes by Anmol',
         description:
-            'This is a space to share my notes from the audio books I have listned to.',
+            'This is a space where I share notes from the audio books I listen to.',
     },
     plugins: [
         'gatsby-plugin-react-helmet',

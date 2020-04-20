@@ -3,7 +3,7 @@ templateKey: my-story-page
 headshotImg: /img/DSCF8401.jpeg
 greeting: Who is this guy❓
 ---
-👋Hey, my name is Anmol Vijayvargiya. Welcome to my notebook on the open internet.
+👋Hey, my name is **Anmol Vijayvargiya**. Welcome to my notebook on the open internet.
 
 Few facts about me
 

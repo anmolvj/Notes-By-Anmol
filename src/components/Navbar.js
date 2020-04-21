@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { AiOutlineLinkedin, AiFillHome } from 'react-icons/ai'
-
+import { Link } from 'gatsby-theme-material-ui'
 const colors = {
     ETON_BLUE: '#87CBAC',
 }
@@ -12,10 +11,20 @@ const StyledNav = styled.nav`
 `
 
 const NavLinks = styled(Link)`
-    color: white;
-    font-family: Nunito;
-    font-weight: bold;
-    font-size: 1rem;
+    &&& {
+        color: white;
+        background-color: #1a1a1a;
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 1rem;
+        &.active {
+            color: ${colors.ETON_BLUE};
+            background-color: #1a1a1a;
+        }
+        &:hover {
+            color: ${colors.ETON_BLUE};
+        }
+    }
 `
 const HomeIcon = styled(AiFillHome)`
     color: ${colors.ETON_BLUE};
@@ -32,6 +41,7 @@ const ExpandedNavContainer = styled.div`
 `
 const HamburgerSpanLines = styled.span`
     color: ${colors.ETON_BLUE};
+    background-color: green;
 `
 
 const LinkedInLink = styled.a`
@@ -95,16 +105,31 @@ const Navbar = class extends React.Component {
                         className={`navbar-menu ${this.state.navBarActiveClass}`}
                     >
                         <div className="navbar-start has-text-centered">
-                            <NavLinks className="navbar-item" to="/my-story">
+                            <NavLinks
+                                className="navbar-item"
+                                to="/my-story"
+                                activeClassName="active"
+                                underline="none"
+                            >
                                 My Story
                             </NavLinks>
                             {/* <Link className="navbar-item" to="/products">
                 Products
               </Link> */}
-                            <NavLinks className="navbar-item" to="/blog">
+                            <NavLinks
+                                className="navbar-item"
+                                to="/blog"
+                                activeClassName="active"
+                                underline="none"
+                            >
                                 Blog
                             </NavLinks>
-                            <NavLinks className="navbar-item" to="/contact">
+                            <NavLinks
+                                className="navbar-item"
+                                to="/contact"
+                                activeClassName="active"
+                                underline="none"
+                            >
                                 Contact
                             </NavLinks>
                             {/* <Link className="navbar-item" to="/contact/examples">

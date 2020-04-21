@@ -10,3 +10,7 @@ greeting: Who is this guy❓
 ***🎓*** I completed my graduate studies in Computer Science from Santa Clara University and graduated  in 2018. 
 
 💪 My yearly goals include reading 25 books 📚, compete in my first professional powerlifting competition  🏋️‍♂️and bag 50+ hours in surf practice 🏄‍♂️.
+
+
+
+##### *🤙Say hi using the contact form or hit me up on Linkedin using the link in the menu.*

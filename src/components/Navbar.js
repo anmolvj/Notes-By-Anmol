@@ -4,22 +4,38 @@ import styled from 'styled-components'
 import { AiOutlineLinkedin, AiFillHome } from 'react-icons/ai'
 
 const colors = {
-    ETON_BLUE: '#87CBAC'
+    ETON_BLUE: '#87CBAC',
 }
 
-const MyName = styled.h1`
+const StyledNav = styled.nav`
+    background-color: #1a1a1a;
+`
+
+const NavLinks = styled(Link)`
+    color: white;
+    font-family: Nunito;
     font-weight: bold;
-    color: ${colors.ETON_BLUE};
+    font-size: 1rem;
 `
 const HomeIcon = styled(AiFillHome)`
     color: ${colors.ETON_BLUE};
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
 `
 const LinkedInIcon = styled(AiOutlineLinkedin)`
     color: ${colors.ETON_BLUE};
     height: 1.5rem;
     width: 1.5rem;
+`
+const ExpandedNavContainer = styled.div`
+    background-color: #1a1a1a;
+`
+const HamburgerSpanLines = styled.span`
+    color: ${colors.ETON_BLUE};
+`
+
+const LinkedInLink = styled.a`
+    color: white;
 `
 
 const Navbar = class extends React.Component {
@@ -27,7 +43,7 @@ const Navbar = class extends React.Component {
         super(props)
         this.state = {
             active: false,
-            navBarActiveClass: ''
+            navBarActiveClass: '',
         }
     }
 
@@ -35,17 +51,17 @@ const Navbar = class extends React.Component {
         // toggle the active boolean in the state
         this.setState(
             {
-                active: !this.state.active
+                active: !this.state.active,
             },
             // after state has been updated,
             () => {
                 // set the class in state for the navbar accordingly
                 this.state.active
                     ? this.setState({
-                          navBarActiveClass: 'is-active'
+                          navBarActiveClass: 'is-active',
                       })
                     : this.setState({
-                          navBarActiveClass: ''
+                          navBarActiveClass: '',
                       })
             }
         )
@@ -53,7 +69,7 @@ const Navbar = class extends React.Component {
 
     render() {
         return (
-            <nav
+            <StyledNav
                 className="navbar is-transparent"
                 role="navigation"
                 aria-label="main-navigation"
@@ -69,34 +85,34 @@ const Navbar = class extends React.Component {
                             data-target="navMenu"
                             onClick={() => this.toggleHamburger()}
                         >
-                            <span />
-                            <span />
-                            <span />
+                            <HamburgerSpanLines />
+                            <HamburgerSpanLines />
+                            <HamburgerSpanLines />
                         </div>
                     </div>
-                    <div
+                    <ExpandedNavContainer
                         id="navMenu"
                         className={`navbar-menu ${this.state.navBarActiveClass}`}
                     >
                         <div className="navbar-start has-text-centered">
-                            <Link className="navbar-item" to="/my-story">
+                            <NavLinks className="navbar-item" to="/my-story">
                                 My Story
-                            </Link>
+                            </NavLinks>
                             {/* <Link className="navbar-item" to="/products">
                 Products
               </Link> */}
-                            <Link className="navbar-item" to="/blog">
+                            <NavLinks className="navbar-item" to="/blog">
                                 Blog
-                            </Link>
-                            <Link className="navbar-item" to="/contact">
+                            </NavLinks>
+                            <NavLinks className="navbar-item" to="/contact">
                                 Contact
-                            </Link>
+                            </NavLinks>
                             {/* <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link> */}
                         </div>
                         <div className="navbar-end has-text-centered">
-                            <a
+                            <LinkedInLink
                                 className="navbar-item"
                                 href="https://www.linkedin.com/in/anmolvijayvargiya"
                                 target="_blank"
@@ -104,11 +120,11 @@ const Navbar = class extends React.Component {
                                 title="Linkedin"
                             >
                                 <LinkedInIcon />
-                            </a>
+                            </LinkedInLink>
                         </div>
-                    </div>
+                    </ExpandedNavContainer>
                 </div>
-            </nav>
+            </StyledNav>
         )
     }
 }

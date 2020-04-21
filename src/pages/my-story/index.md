@@ -14,7 +14,7 @@ greeting: Who is this guy❓
 
 &nbsp;
 
-💪 My yearly goals include reading 25 books 📚, compete in my first professional powerlifting competition 🏋️‍♂️and bag 50+ hours in surf practice 🏄‍♂️.
+💪 My yearly goals => read 25 books 📚, compete in a professional powerlifting competition 🏋️‍♂️ & bag 50+ hours of surf practice 🏄‍♂️.
 &nbsp;
 
 &nbsp;

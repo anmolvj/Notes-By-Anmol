@@ -7,9 +7,7 @@ import px2vw from '../../../utils/px2vw'
 const Image = styled(Img)`
     margin: auto;
     width: 100vw;
-    @media (min-width: 768px) {
-        width: ${px2vw(768, 1024)};
-    }
+
     @media (min-width: 1024px) {
         max-width: ${px2vw(750)};
     }
@@ -37,8 +35,8 @@ PreviewCompatibleImage.propTypes = {
         childImageSharp: PropTypes.object,
         image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
             .isRequired,
-        style: PropTypes.object
-    }).isRequired
+        style: PropTypes.object,
+    }).isRequired,
 }
 
 export default PreviewCompatibleImage

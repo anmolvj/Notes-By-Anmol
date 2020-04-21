@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Parser } from 'html-to-react'
+import Grid from '@material-ui/core/Grid'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/BlogRoll/Post/PreviewCompatibleImage'
@@ -16,18 +17,21 @@ const colors = {
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-
-    @media (min-width: 1024px) {
+    background-color: #1a1a1a;
+    height: 100%;
+    @media (min-width: 1280px) {
         flex-direction: row;
     }
 `
-const ImageContainer = styled.div``
+const ImageContainer = styled.div`
+    width: 100%;
+`
 
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #1a1a1a;
     color: white;
+    height: 100%;
 `
 const Greeting = styled.div`
     color: ${colors.ETON_BLUE};
@@ -37,7 +41,7 @@ const Greeting = styled.div`
     text-align: center;
     font-family: 'Nunito';
     padding: 10px;
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         font-size: 3rem;
     }
 `
@@ -57,10 +61,20 @@ const Starter = styled.h2`
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    text-align: center;
+
     @media (min-width: 1024px) {
         font-size: 2rem;
     }
 `
+const Facts = styled.div`
+    padding: 1.5rem;
+    padding-left: 2rem;
+    @media (min-width: 1280px) {
+        padding-bottom: 0;
+    }
+`
+
 export const MyStoryPageTemplate = ({
     greeting,
     content,
@@ -76,15 +90,13 @@ export const MyStoryPageTemplate = ({
                 <PreviewCompatibleImage imageInfo={headshotImg} />
             </ImageContainer>
             <TextContainer>
-                {/* <Greeting>{greeting}</Greeting> */}
                 <Greeting>Who is this guy ?</Greeting>
                 <ContentContainer>
                     <Starter>
                         👋&nbsp;&nbsp;Hey, my name is Anmol Vijayvargiya.
                         Welcome to my&nbsp;📕&nbsp;&nbsp;notebook.
                     </Starter>
-                    {/* <PageContent content={content} /> */}
-                    {htmlToReactParser.parse(content)}
+                    <Facts>{htmlToReactParser.parse(content)}</Facts>
                 </ContentContainer>
             </TextContainer>
         </Container>
@@ -125,7 +137,7 @@ export const myStoryPageQuery = graphql`
                 greeting
                 headshotImg {
                     childImageSharp {
-                        fluid(maxWidth: 700, quality: 100) {
+                        fluid(quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }

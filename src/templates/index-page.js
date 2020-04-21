@@ -71,16 +71,7 @@ const BlogRollHeader = styled.div`
     margin: 20px auto;
     font-weight: bold;
 `
-export const IndexPageTemplate = ({
-    image,
-    fname,
-    lname,
-    heading,
-    subheading,
-    mainpitch,
-    description,
-    intro,
-}) => (
+export const IndexPageTemplate = ({ fname, lname, subheading }) => (
     <MainContainer>
         <BannerContainer>
             <NameContainer>
@@ -111,16 +102,9 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     fname: PropTypes.string,
     lname: PropTypes.string,
-    heading: PropTypes.string,
     subheading: PropTypes.string,
-    mainpitch: PropTypes.object,
-    description: PropTypes.string,
-    intro: PropTypes.shape({
-        blurbs: PropTypes.array,
-    }),
 }
 
 const IndexPage = ({ data }) => {
@@ -129,14 +113,9 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <IndexPageTemplate
-                image={frontmatter.image}
                 fname={frontmatter.fname}
                 lname={frontmatter.lname}
-                heading={frontmatter.heading}
                 subheading={frontmatter.subheading}
-                mainpitch={frontmatter.mainpitch}
-                description={frontmatter.description}
-                intro={frontmatter.intro}
             />
         </Layout>
     )
@@ -158,34 +137,7 @@ export const pageQuery = graphql`
             frontmatter {
                 fname
                 lname
-                image {
-                    childImageSharp {
-                        fluid(maxWidth: 2048) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
-                heading
                 subheading
-                mainpitch {
-                    title
-                    description
-                }
-                description
-                intro {
-                    blurbs {
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 240) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        text
-                    }
-                    heading
-                    description
-                }
             }
         }
     }

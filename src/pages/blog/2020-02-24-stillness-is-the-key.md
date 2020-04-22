@@ -9,7 +9,6 @@ featuredimage: /img/stillness-is-the-key-book-cover.jpg
 tags:
   - philosophy
   - stoicism
-  - productivity
   - psychology
 ---
 

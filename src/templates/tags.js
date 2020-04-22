@@ -12,7 +12,7 @@ const colors = {
     ETON_BLUE: '#87CBAC',
     CERULEAN_BLUE: '#3066BE',
 }
-const StyledBrowseAllTagsLink = styled(Link)`
+const Label = styled.span`
     color: ${colors.ETON_BLUE};
 `
 const StyledArrow = styled(IoMdArrowRoundForward)`
@@ -57,9 +57,9 @@ const TagRoute = ({ data, pageContext }) => {
                                 variant="text"
                                 endIcon={<IoMdArrowRoundForward />}
                             >
-                                <StyledBrowseAllTagsLink to="/tags/">
-                                    Browse all tags
-                                </StyledBrowseAllTagsLink>
+                                <Link to="/tags/">
+                                    <Label>Browse all tags</Label>
+                                </Link>
                             </StyledBrowseAllTagsButton>
                         </div>
                     </div>

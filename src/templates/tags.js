@@ -7,14 +7,16 @@ import styled from 'styled-components'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
 import ExpansionPanel from '../components/ExpansionPanel'
-import colors from '../colors'
 
-const Label = styled.span`
-    color: ${colors.ETON_BLUE};
-`
 const StyledBrowseAllTagsButton = styled(Button)`
-    color: ${colors.ETON_BLUE};
     font-weight: bold;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-family: Nunito;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
 `
 
 const TagRoute = ({ data, pageContext }) => {
@@ -45,14 +47,17 @@ const TagRoute = ({ data, pageContext }) => {
                                 <TaggedWith count={totalCount} tag={tag} />
                             </h3>
                             <ul className="taglist">{postLinks}</ul>
-                            <StyledBrowseAllTagsButton
-                                variant="text"
-                                endIcon={<IoMdArrowRoundForward />}
-                            >
-                                <Link to="/tags/">
-                                    <Label>Browse all tags</Label>
-                                </Link>
-                            </StyledBrowseAllTagsButton>
+                            <Link to="/tags/">
+                                <StyledBrowseAllTagsButton
+                                    variant="text"
+                                    endIcon={<IoMdArrowRoundForward />}
+                                    size="large"
+                                    disableFocusRipple
+                                    disableRipple
+                                >
+                                    Browse all tags
+                                </StyledBrowseAllTagsButton>
+                            </Link>
                         </div>
                     </div>
                 </div>

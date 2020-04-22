@@ -115,7 +115,6 @@ export const BlogPostTemplate = ({
                                             </Grid>
                                         ))}
                                     </Grid>
-                                    {/* <Tags tags={tags} size="medium" tagspage /> */}
                                 </div>
                             ) : null}
                         </TextContainer>

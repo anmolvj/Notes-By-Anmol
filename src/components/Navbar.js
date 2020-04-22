@@ -113,9 +113,7 @@ const Navbar = class extends React.Component {
                             >
                                 My Story
                             </NavLinks>
-                            {/* <Link className="navbar-item" to="/products">
-                Products
-              </Link> */}
+
                             <NavLinks
                                 className="navbar-item"
                                 to="/blog"
@@ -132,9 +130,6 @@ const Navbar = class extends React.Component {
                             >
                                 Contact
                             </NavLinks>
-                            {/* <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link> */}
                         </div>
                         <div className="navbar-end has-text-centered">
                             <LinkedInLink

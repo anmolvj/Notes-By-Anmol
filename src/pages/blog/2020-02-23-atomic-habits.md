@@ -8,9 +8,10 @@ description: A practical guide to finding queues in existing habits to insert
 featuredpost: false
 featuredimage: /img/atomic-habits-book-cover.jpg
 tags:
-  - productivity
-  - habit programming
   - psychology
+  - productivity
+  - habits
+  - ""
 ---
 
 ## KEY TAKEAWAYS 

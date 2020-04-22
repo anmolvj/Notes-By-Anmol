@@ -6,7 +6,9 @@ import Grid from '@material-ui/core/Grid'
 import Post from './Post'
 
 const BlogRollGrid = styled(Grid)``
-
+const BlogRollGridItems = styled(Grid)`
+    height: 100%;
+`
 export const BlogRoll = (props) => {
     const { data, showAll } = props
     const { edges: posts } = data.allMarkdownRemark
@@ -22,13 +24,13 @@ export const BlogRoll = (props) => {
                 posts.map(({ node: post }, idx) => {
                     if (showAll || idx < 4) {
                         return (
-                            <Grid item xs={12} sm={6}>
+                            <BlogRollGridItems item xs={12} sm={6}>
                                 <Post post={post} />
-                            </Grid>
+                            </BlogRollGridItems>
                         )
                     }
                 })}
-            {posts.length % 2 && <Grid item xs={12} sm={6} />}
+            {posts.length % 2 !== 0 && <Grid item xs={12} sm={6} />}
         </BlogRollGrid>
     )
 }

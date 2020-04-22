@@ -9,9 +9,10 @@ description: A step-by-step blueprint to free yourself from the shackles of a
 featuredpost: false
 featuredimage: /img/the-4-hour-work-week-book-cover.jpg
 tags:
-  - productivity
-  - career
-  - travel
+  - Personal Development
+  - Business
+  - Productivity
+  - Lifestyle
 ---
 
 ## KEY TAKEAWAYS 

@@ -9,10 +9,7 @@ import Grid from '@material-ui/core/Grid'
 import Tags from '../../Tags'
 import Tag from '../../Tags/Tag.logic'
 import { IoMdTime } from 'react-icons/io'
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE',
-}
+import colors from '../../../colors'
 
 const TypographyNunito = styled(Typography)`
     font-family: 'Nunito';

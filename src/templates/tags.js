@@ -7,11 +7,8 @@ import styled from 'styled-components'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
 import ExpansionPanel from '../components/ExpansionPanel'
+import colors from '../colors'
 
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE',
-}
 const Label = styled.span`
     color: ${colors.ETON_BLUE};
 `

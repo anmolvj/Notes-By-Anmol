@@ -3,19 +3,16 @@ import { navigate } from 'gatsby-link'
 import Button from '@material-ui/core/Button'
 import styled from 'styled-components'
 import { MdSend } from 'react-icons/md'
-
+import colors from '../../colors'
 import Layout from '../../components/Layout'
 
 function encode(data) {
     return Object.keys(data)
         .map(
-            key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+            (key) =>
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
         .join('&')
-}
-
-const colors = {
-    ETON_BLUE: '#87CBAC'
 }
 
 const SendButtonContainer = styled.div`
@@ -39,11 +36,11 @@ export default class Index extends React.Component {
         this.state = { isValidated: false }
     }
 
-    handleChange = e => {
+    handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleSubmit = e => {
+    handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target
         fetch('/', {
@@ -51,11 +48,11 @@ export default class Index extends React.Component {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
                 'form-name': form.getAttribute('name'),
-                ...this.state
-            })
+                ...this.state,
+            }),
         })
             .then(() => navigate(form.getAttribute('action')))
-            .catch(error => alert(error))
+            .catch((error) => alert(error))
     }
 
     render() {

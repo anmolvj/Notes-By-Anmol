@@ -8,11 +8,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/BlogRoll/Post/PreviewCompatibleImage'
 import px2vw from '../utils/px2vw'
-
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE',
-}
+import colors from '../colors'
 
 const Container = styled.div`
     display: flex;

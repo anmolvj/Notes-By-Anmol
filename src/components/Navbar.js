@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineLinkedin, AiFillHome } from 'react-icons/ai'
 import { Link } from 'gatsby-theme-material-ui'
-const colors = {
-    ETON_BLUE: '#87CBAC',
-}
+import colors from '../colors'
 
 const StyledNav = styled.nav`
     background-color: #1a1a1a;

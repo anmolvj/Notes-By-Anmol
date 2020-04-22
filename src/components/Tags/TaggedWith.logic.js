@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE',
-}
+import colors from '../../colors'
 
 const TaggedWithContainer = styled.div``
 const Count = styled.span`

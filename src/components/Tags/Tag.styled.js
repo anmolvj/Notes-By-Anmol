@@ -3,11 +3,8 @@ import { Link } from 'gatsby-theme-material-ui'
 import Chip from '@material-ui/core/Chip'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
-const colors = {
-    ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE',
-    TUSCAN: '#F7D9A0',
-}
+import colors from '../../colors'
+
 export const StyledLabel = styled(Typography)`
     font-size: 0.6rem;
     font-weight: bold;

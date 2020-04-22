@@ -9,10 +9,6 @@ import Button from '@material-ui/core/Button'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import { AiOutlineRead } from 'react-icons/ai'
 
-const colors = {
-    ETON_BLUE: '#87CBAC',
-}
-
 const MainContainer = styled.div``
 
 const BannerContainer = styled.div``

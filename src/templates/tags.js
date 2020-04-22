@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Button from '@material-ui/core/Button'
 import styled from 'styled-components'
+import { IoMdArrowRoundForward } from 'react-icons/io'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
 import ExpansionPanel from '../components/ExpansionPanel'
 
@@ -11,7 +12,14 @@ const colors = {
     ETON_BLUE: '#87CBAC',
     CERULEAN_BLUE: '#3066BE',
 }
-
+const StyledBrowseAllTagsLink = styled(Link)`
+    color: ${colors.ETON_BLUE};
+`
+const StyledArrow = styled(IoMdArrowRoundForward)`
+    position: relative;
+    top: 7px;
+    font-size: 1.5rem;
+`
 const StyledBrowseAllTagsButton = styled(Button)`
     color: ${colors.ETON_BLUE};
     font-weight: bold;
@@ -24,6 +32,7 @@ const TagRoute = ({ data, pageContext }) => {
             url={post.node.fields.slug}
             title={post.node.frontmatter.title}
             description={post.node.frontmatter.description}
+            featuredimage={post.node.frontmatter.featuredimage}
         />
     ))
     const tag = pageContext.tag
@@ -44,8 +53,13 @@ const TagRoute = ({ data, pageContext }) => {
                                 <TaggedWith count={totalCount} tag={tag} />
                             </h3>
                             <ul className="taglist">{postLinks}</ul>
-                            <StyledBrowseAllTagsButton variant="text">
-                                <Link to="/tags/">Browse all tags</Link>
+                            <StyledBrowseAllTagsButton
+                                variant="text"
+                                endIcon={<IoMdArrowRoundForward />}
+                            >
+                                <StyledBrowseAllTagsLink to="/tags/">
+                                    Browse all tags
+                                </StyledBrowseAllTagsLink>
                             </StyledBrowseAllTagsButton>
                         </div>
                     </div>
@@ -78,6 +92,13 @@ export const tagPageQuery = graphql`
                     frontmatter {
                         title
                         description
+                        featuredimage {
+                            childImageSharp {
+                                fluid(maxWidth: 768, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                 }
             }

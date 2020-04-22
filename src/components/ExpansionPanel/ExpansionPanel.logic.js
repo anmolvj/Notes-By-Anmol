@@ -1,27 +1,42 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-theme-material-ui'
+import Grid from '@material-ui/core/Grid'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
+import { MdExpandMore } from 'react-icons/md'
 import {
-    StyledLinkIcon,
     Title,
     Description,
     StyledExpansionPanel,
-    StyledExpansionPanelDetails
+    StyledExpansionPanelDetails,
+    ImageGridItem,
 } from './ExpansionPanel.styled'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-export default ({ url, title, description }) => (
+export default ({ url, title, description, featuredimage }) => (
     <StyledExpansionPanel>
         <ExpansionPanelSummary
             aria-controls="panel1a-content"
-            id="panel1a-header"
+            expandIcon={<MdExpandMore />}
         >
             <Link to={url}>
-                <StyledLinkIcon />
+                <Title variant="body2">{title}</Title>
             </Link>
-            <Title variant="body2">{title}</Title>
         </ExpansionPanelSummary>
         <StyledExpansionPanelDetails>
-            <Description variant="subtitle2">{description}</Description>
+            <Grid
+                container
+                direction="row"
+                justify="space-around"
+                alignItems="center"
+                spacing={2}
+            >
+                <ImageGridItem item xs={1}>
+                    <PreviewCompatibleImage imageInfo={featuredimage} />
+                </ImageGridItem>
+                <Grid item xs={10}>
+                    <Description variant="subtitle2">{description}</Description>
+                </Grid>
+            </Grid>
         </StyledExpansionPanelDetails>
     </StyledExpansionPanel>
 )

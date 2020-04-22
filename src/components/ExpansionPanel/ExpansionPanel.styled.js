@@ -2,16 +2,16 @@ import styled from 'styled-components'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import Typography from '@material-ui/core/Typography'
-import { FaLink } from 'react-icons/fa'
+import Grid from '@material-ui/core/Grid'
 
+export const ImageGridItem = styled(Grid)`
+    min-width: 100px;
+`
 export const colors = {
     ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
+    CERULEAN_BLUE: '#3066BE',
 }
 
-export const StyledLinkIcon = styled(FaLink)`
-    margin-right: 10px;
-`
 export const Title = styled(Typography)`
     font-weight: bold;
     font-family: Nunito;

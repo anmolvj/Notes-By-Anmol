@@ -11,7 +11,7 @@ const colors = {
     TUSCAN: '#F7D9A0',
 }
 const StyledLabel = styled(Typography)`
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: bold;
 `
 

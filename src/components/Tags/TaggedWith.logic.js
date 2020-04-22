@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const colors = {
     ETON_BLUE: '#87CBAC',
-    CERULEAN_BLUE: '#3066BE'
+    CERULEAN_BLUE: '#3066BE',
 }
 
 const TaggedWithContainer = styled.div``
@@ -11,7 +11,7 @@ const Count = styled.span`
     color: ${colors.ETON_BLUE};
 `
 const Tag = styled.span`
-    color: ${colors.CERULEAN_BLUE};
+    color: #f50057;
 `
 
 const TaggedWith = ({ count, tag }) => (

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { GiSpellBook } from 'react-icons/gi'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
-import Button from '@material-ui/core/Button'
+import { Button } from 'gatsby-theme-material-ui'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import { AiOutlineRead } from 'react-icons/ai'
 

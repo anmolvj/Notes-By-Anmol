@@ -77,7 +77,6 @@ export const MyStoryPageTemplate = ({
     headshotImg,
     contentComponent,
 }) => {
-    const PageContent = contentComponent || Content
     const htmlToReactParser = new Parser()
 
     return (

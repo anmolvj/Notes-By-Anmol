@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Button from '@material-ui/core/Button'
+import { Button } from 'gatsby-theme-material-ui'
 import styled from 'styled-components'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
@@ -11,11 +11,6 @@ import colors from '../colors'
 
 const Label = styled.span`
     color: ${colors.ETON_BLUE};
-`
-const StyledArrow = styled(IoMdArrowRoundForward)`
-    position: relative;
-    top: 7px;
-    font-size: 1.5rem;
 `
 const StyledBrowseAllTagsButton = styled(Button)`
     color: ${colors.ETON_BLUE};

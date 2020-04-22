@@ -1,6 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import Button from '@material-ui/core/Button'
+import { Button } from 'gatsby-theme-material-ui'
 import styled from 'styled-components'
 import { MdSend } from 'react-icons/md'
 import colors from '../../colors'

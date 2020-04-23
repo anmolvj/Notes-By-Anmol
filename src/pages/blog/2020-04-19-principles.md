@@ -12,10 +12,8 @@ featuredpost: true
 featuredimage: /img/principles-book-cover.jpg
 tags:
   - decision making
-  - economics
   - psychology
-  - leadership
-  - investing
+  - business
 ---
 
 ## KEY TAKEAWAYS

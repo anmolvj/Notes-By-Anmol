@@ -7,10 +7,11 @@ import styled from 'styled-components'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import TaggedWith from '../components/Tags/TaggedWith.logic'
 import ExpansionPanel from '../components/ExpansionPanel'
+import colors from '../colors'
 
 const StyledBrowseAllTagsButton = styled(Button)`
     font-weight: bold;
-    color: #1a1a1a;
+    color: ${colors.VERY_DARK_GREY};
     font-size: 1rem;
     font-family: Nunito;
     text-decoration: none;

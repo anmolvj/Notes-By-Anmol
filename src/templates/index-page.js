@@ -8,12 +8,12 @@ import BlogRoll from '../components/BlogRoll'
 import { Button } from 'gatsby-theme-material-ui'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 import { AiOutlineRead } from 'react-icons/ai'
-
+import colors from '../colors'
 const MainContainer = styled.div``
 
 const BannerContainer = styled.div``
 const ReadMoreButton = styled(Button)`
-    color: #1a1a1a;
+    color: ${colors.VERY_DARK_GREY};
     font-size: 1rem;
     font-weight: bold;
     font-family: Nunito;

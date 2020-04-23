@@ -49,7 +49,7 @@ const NoteCard = styled(Card)`
     /* position: relative needed for featured 
     post tag to have correct fixed positioning */
     position: relative;
-    background-color: #1a1a1a;
+    background-color: ${colors.VERY_DARK_GREY};
 `
 
 const NoteCardTitle = ({ link, title }) => (

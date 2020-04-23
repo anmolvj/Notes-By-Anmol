@@ -5,19 +5,19 @@ import { Link } from 'gatsby-theme-material-ui'
 import colors from '../colors'
 
 const StyledNav = styled.nav`
-    background-color: #1a1a1a;
+    background-color: ${colors.VERY_DARK_GREY};
 `
 
 const NavLinks = styled(Link)`
     &&& {
         color: white;
-        background-color: #1a1a1a;
+        background-color: ${colors.VERY_DARK_GREY};
         font-family: Nunito;
         font-weight: bold;
         font-size: 1rem;
         &.active {
             color: ${colors.ETON_BLUE};
-            background-color: #1a1a1a;
+            background-color: ${colors.VERY_DARK_GREY};
         }
         &:hover {
             color: ${colors.ETON_BLUE};
@@ -35,7 +35,7 @@ const LinkedInIcon = styled(AiOutlineLinkedin)`
     width: 1.5rem;
 `
 const ExpandedNavContainer = styled.div`
-    background-color: #1a1a1a;
+    background-color: ${colors.VERY_DARK_GREY};
 `
 const HamburgerSpanLines = styled.span`
     color: ${colors.ETON_BLUE};
@@ -44,6 +44,10 @@ const HamburgerSpanLines = styled.span`
 
 const LinkedInLink = styled.a`
     color: white;
+    background-color: ${colors.VERY_DARK_GREY};
+    &&:hover {
+        background-color: ${colors.VERY_DARK_GREY};
+    }
 `
 
 const Navbar = class extends React.Component {

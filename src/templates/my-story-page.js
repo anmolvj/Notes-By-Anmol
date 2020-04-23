@@ -13,7 +13,7 @@ import colors from '../colors'
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #1a1a1a;
+    background-color: ${colors.VERY_DARK_GREY};
     height: 100%;
     @media (min-width: 1280px) {
         flex-direction: row;
@@ -107,7 +107,7 @@ MyStoryPageTemplate.propTypes = {
 const MyStoryPage = ({ data }) => {
     const { markdownRemark: frontmatter } = data
     return (
-        <Layout>
+        <Layout bgColor={colors.VERY_DARK_GREY}>
             <MyStoryPageTemplate
                 contentComponent={HTMLContent}
                 greeting={frontmatter.frontmatter.greeting}

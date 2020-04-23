@@ -12,12 +12,13 @@ const BodyContainer = styled.div`
 `
 const MainContainer = styled.div`
     flex: 1 0 auto;
+    background-color: ${(props) => (props.bgColor ? props.bgColor : 'inherit')};
 `
 
 const DefaultFont = styled.div`
     font-family: 'Nunito';
 `
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, bgColor }) => {
     const { title, description } = useSiteMetadata()
     return (
         <BodyContainer>
@@ -44,7 +45,7 @@ const TemplateWrapper = ({ children }) => {
                     rel="stylesheet"
                 />
             </Helmet>
-            <MainContainer>
+            <MainContainer bgColor={bgColor}>
                 <Navbar />
                 <DefaultFont>{children}</DefaultFont>
             </MainContainer>

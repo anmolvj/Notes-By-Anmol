@@ -5,9 +5,10 @@ import px2vw from '../../../utils/px2vw'
 import { FaAward, FaBookReader } from 'react-icons/fa'
 import { GiBookCover } from 'react-icons/gi'
 import { MdDateRange } from 'react-icons/md'
+import colors from '../../../colors'
 
 export const StyledCard = styled(Card)`
-    background-color: #1a1a1a;
+    background-color: ${colors.VERY_DARK_GREY};
     font-family: 'Nunito';
     display: flex;
     position: relative;

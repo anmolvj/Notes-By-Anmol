@@ -11,7 +11,6 @@ tags:
   - psychology
   - productivity
   - habits
-  - ""
 ---
 
 ## KEY TAKEAWAYS 

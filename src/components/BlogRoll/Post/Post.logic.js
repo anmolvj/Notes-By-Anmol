@@ -21,6 +21,7 @@ const PostTitle = styled(TypographyNunito)`
     margin-top: 10px;
     margin-bottom: 0;
     font-weight: bold;
+    text-transform: uppercase;
 `
 const DescriptionText = styled(TypographyNunito)`
     height: 3rem;

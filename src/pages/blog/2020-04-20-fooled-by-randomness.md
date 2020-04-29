@@ -20,7 +20,7 @@ tags:
 >
 > “_Probably is not a mere computation of odds on the dice or more complicated variance. It is the acceptance of the lack of certainty in our knowledge and the development of methods for dealing with our ignorance._” - Nassim Nicholas Taleb (Author)
 
-**KEY IDEAS**
+**KEY IDEAS 💡**
 
 -   Why consider the worst case that took place in our past as the worst possible case. If the past, by bringing surprises, did not resemble the past previous to it (past’s past) then why should our future resemble our current past.
 -   Clearly risk-taking is necessary for large success but it is also necessary for failure.
@@ -42,7 +42,7 @@ tags:
 -   **Attribution bias** - You attribute your success to skills but failures to randomness. It is a human heuristic that makes us believe so in order not to kill our self-esteem and keep us going against adversity.
 -   **Sampling Theory** (Law of large numbers) - If you bang one million dollars at your next visit to Los Vegas at the roulette table in one single shot you will not be able to ascertain from this single outcome whether the house has the advantage or if you were particularly out of the gods' favor. If you slice your gamble into a series of one 1 million bets of one dollar each the amount you recover will systematically show the casinos advantage.
 
-**FOOD FOR THOUGHT**
+**FOOD FOR THOUGHT 🗯**
 
 -   Outside of textbooks and casinos probability seldom presents itself as a mathematical problem or brain teaser. Mother nature does not tell you how many holes there are on the roulette table nor does she deliver problems in a textbook way.
 -   In the real world one has to guess the problem more than the solution.
@@ -55,7 +55,7 @@ tags:
 -   **Induction** - It is going from plenty of particulars to the generals. It is very helpful as general takes less room in one's memory than the collection of particulars. The effect of such compression is the reduction in the degree of detective randomness.
 -   A popular belief is that superstition arises from the nurture when it may be from our nature. Something in us has not developed properly over the past thousand years. It's a remnant of our old brain.
 
-**OBSERVATIONS**
+**OBSERVATIONS 👀**
 
 -   Mild success can be explainable by skills and labor. Wild success is attributable to variance.
 -   **The quality of a decision cannot be judged solely based on its outcomes.**
@@ -75,7 +75,7 @@ tags:
 -   Some degree of unpredictability or lack of knowledge can be beneficial to our defective species. A slightly random schedule prevents us from optimizing and being exceedingly efficient, particularly in the wrong things.
 -   Research on happiness shows that those who live under self-imposed pressure to be optimal in their enjoyment of things suffer a measure of distress.
 
-**CONCEPTS**
+**CONCEPTS 🧪**
 
 -   The scientific name for conscious and sub-conscious is declarative and non-declarative.
 -   **Historical Determinism**- A belief that historical processes have a certain inevitability, based on some fundamental factor.
@@ -85,6 +85,6 @@ tags:
 -   **Regression to the Mean**- Consider that two average-sized parent dogs 🐕 produce a large litter. The largest dogs (if they diverge too much from the average) will tend to produce offspring of a smaller size than themselves than vice versa. This reversion for the large outliers is what has been observed in history and is explained as regression to the mean. Remember the larger the deviation the more important its effect. Word of warning - All deviations do not come from this effect but a disproportionately large proportion of them do.
 -   **Chaos Theory**- Chaos theory is a branch of mathematics focusing on the study of chaos—states of dynamical systems whose apparently-random states of disorder and irregularities are often governed by deterministic laws that are highly sensitive to initial conditions.
 
-**RECOMMENDATIONS**
+**RECOMMENDATIONS 💁‍♂️**
 
 -   Book - Fashionable Nonsense (Postmodernism)

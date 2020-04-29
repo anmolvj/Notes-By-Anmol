@@ -53,7 +53,7 @@ module.exports = {
             options: {
                 prependToBody: true,
                 includePaths: [{ regex: '^/blog/' }],
-                height: 2,
+                height: 3,
                 color: `#f50057`,
             },
         },

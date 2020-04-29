@@ -3,7 +3,7 @@ templateKey: my-story-page
 headshotImg: /img/DSCF8401.jpeg
 greeting: Who is this guy❓
 ---
-👨‍💻 I currently work for a eCommence company as a software developer and build tools that enhance the Experience of software developers. I like to call myself an ***Experience* 🧙‍♂️*Developer.*** &nbsp;
+👨‍💻 I currently work for an eCommerce company as a software developer and build tools that enhance the Experience of software developers. I like to call myself an ***Experience* 🧙‍♂️*Developer.*** &nbsp;
 
 &nbsp;
 

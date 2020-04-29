@@ -23,7 +23,7 @@ tags:
 **LEARNINGS** ✍️
 
 * You binge on something because you think it's gonna make you feel in a better state than how you feel in your current state.
-* Instead of saying "*you HAVE to do this*" say "*you GET to do this*". You transition from seeing these behaviors as a burden and turn them into opportunities.
+* Instead of saying "*you **have** to do this*" say "*you **get** to do this*". You transition from seeing these behaviors as a burden and turn them into opportunities.
 * Prime your environment to make future actions easier.
 * Break the habits you wanna make into 2 min phases of habit. Then do just one phase for a few days (this way you are casting a vote for your habit).
 * Standardize before you optimize. You cannot improve a habit that doesn't exist.

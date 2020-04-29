@@ -8,7 +8,7 @@ description: Ray Dalio, one of the world's most successful investors and
   refined, and used over the past forty years to create unique results in both
   life and business—and which any person or organization can adopt to help
   achieve their goals.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/principles-book-cover.jpg
 tags:
   - decision making

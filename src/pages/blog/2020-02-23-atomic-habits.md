@@ -17,7 +17,7 @@ tags:
 **RULE OF THUMB** 👍
 
 * A new habit should not take more than 2 minutes to complete.
-* Habit Stacking - After**current habit**I will perform**new habit**)
+* Habit Stacking - After (**current habit**)I will perform (**new habit**)
 * Temptation Bundling (Doing what you need to with what you want to) 
 
 **LEARNINGS** ✍️

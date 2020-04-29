@@ -13,7 +13,7 @@ tags:
   - Productivity
   - Lifestyle
 ---
-## KEY TAKEAWAYS
+# KEY TAKEAWAYS
 
 ***QUOTES ❝***
 

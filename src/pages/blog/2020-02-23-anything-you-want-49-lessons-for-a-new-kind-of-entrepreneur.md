@@ -13,9 +13,9 @@ tags:
   - Entrepreneurship
   - leadership
 ---
-## KEY TAKEAWAYS 
+# KEY TAKEAWAYS
 
-* Don't punish everyone for one person's mistake. Don’t impose rules for on your customers due to one bad experience with another one.
+* Don't punish everyone for one person's mistake. Don’t impose rules on your customers due to one bad experience with another one.
 * Proudly exclude people, proudly say what you are not. This will enable you to win the hearts of the people you want.
 * The greatest of the idea are zero if not executed. Smallest of the idea have substance if you execute them. **Ideas are just a multiplier of execution.**
 * Make all forms of writing funny and grandiose within reason by using your humor.

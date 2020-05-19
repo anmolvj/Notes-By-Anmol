@@ -21,7 +21,7 @@ tags:
 >
 > *“What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention, and a need to allocate that attention efficiently among the overabundance of information sources that might consume it.”* - **Herbert A. Simon**
 >
-> *“Creation is a better means of self-explanation than possession; it is through creating, not possessing, that life is revealed.”* - **Visa D. Scudder**
+> *“Creation is a better means of self-expression than possession; it is through creating, not possessing, that life is revealed.”* - **Visa D. Scudder**
 >
 > *"Make mistakes of Ambition and not mistakes of sloth. Develop the strength to do bold things, not the strength to suffer.”* - **Niccolo Machiavelli**
 >

@@ -1,13 +1,14 @@
 ---
 templateKey: my-story-page
-headshotImg: /img/DSCF8401.jpeg
+headshotImg: /img/portrait.jpg
 greeting: Who is this guy❓
 ---
-👨‍💻 I currently work for an eCommerce company as a software developer and build tools that enhance the Experience of software developers. I like to call myself an ***Experience* 🧙‍♂️*Developer.*** &nbsp;
+
+👨‍💻 I currently work for an eCommerce company as a software developer and build tools that enhance the Experience of software developers. I like to call myself an **_Experience_ 🧙‍♂️*Developer.*** &nbsp;
 
 &nbsp;
 
-***🎓*** I completed my graduate studies in Computer Science from Santa Clara University and graduated in 2018. &nbsp;
+**_🎓_** I completed my graduate studies in Computer Science from Santa Clara University and graduated in 2018. &nbsp;
 
 &nbsp;
 
@@ -15,4 +16,4 @@ greeting: Who is this guy❓
 
 &nbsp;
 
-##### *🤙 Say hi using the contact form or hit me up on Linkedin using the link in the menu.*
+##### _🤙 Say hi using the contact form or hit me up on Linkedin using the link in the menu._

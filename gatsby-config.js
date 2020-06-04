@@ -25,7 +25,7 @@ module.exports = {
                 background_color: `#87CBAC`,
                 theme_color: `#87CBAC`,
                 display: `standalone`,
-                icon: `${__dirname}/static/img/DSCF8401.jpeg`,
+                icon: `${__dirname}/static/img/portrait.jpg`,
             },
         },
         {

@@ -4,7 +4,7 @@ title: FOOLED BY RANDOMNESS
 author: Nassim Nicholas Taleb
 date: 2020-04-20T22:51:58.632Z
 description: The hidden role of chance in life and in Markets.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/fooled-by-randomness-book-cover.jpg
 tags:
     - Probability

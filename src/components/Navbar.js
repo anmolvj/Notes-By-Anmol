@@ -109,7 +109,8 @@ const Navbar = class extends React.Component {
                         <div className="navbar-start has-text-centered">
                             <NavLinks
                                 className="navbar-item"
-                                to="/my-story"
+                                to="https://www.linkedin.com/in/anmolvijayvargiya/"
+                                target="_blank"
                                 activeClassName="active"
                                 underline="none"
                             >
@@ -133,7 +134,7 @@ const Navbar = class extends React.Component {
                                 Contact
                             </NavLinks>
                         </div>
-                        <div className="navbar-end has-text-centered">
+                        {/* <div className="navbar-end has-text-centered">
                             <LinkedInLink
                                 className="navbar-item"
                                 href="https://www.linkedin.com/in/anmolvijayvargiya"
@@ -143,7 +144,7 @@ const Navbar = class extends React.Component {
                             >
                                 <LinkedInIcon />
                             </LinkedInLink>
-                        </div>
+                        </div> */}
                     </ExpandedNavContainer>
                 </div>
             </StyledNav>

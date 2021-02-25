@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Notes By Anmol 👋</h1>
+<h1 align="center">Notes By Anmol 👋</h1>
 <p>
   <a href="https://api.netlify.com/api/v1/badges/e92b2b90-e366-4f4d-b9bd-043b767fd899/deploy-status)](https://app.netlify.com/sites/determined-brown-b951b8/deploys" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />

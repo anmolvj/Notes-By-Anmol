@@ -32,7 +32,7 @@
         "gatsby-remark-relative-images": "^0.3.0",
         "gatsby-source-filesystem": "^2.2.4",
         "gatsby-theme-material-ui": "^1.0.8",
-        "gatsby-transformer-remark": "^2.7.3",
+        "gatsby-transformer-remark": "^5.25.1",
         "gatsby-transformer-sharp": "^2.4.6",
         "google-fonts-plugin": "^5.0.2",
         "html-to-react": "^1.4.2",
